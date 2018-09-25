@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Константин Столяров](https://up.htmlacademy.ru/adaptive/15/user/615885).
-* Наставник: `Неизвестно`.
+* Наставник: [Егор Король](https://htmlacademy.ru/profile/id501115).
 
 ---
 
