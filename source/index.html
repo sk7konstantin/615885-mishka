@@ -15,10 +15,10 @@
         <div class="nav__wrapper">
           <ul class="nav__list site-list">
             <li class="site-list__item">
-              <a href="#">Каталог товаров</a>
+              <a href="catalog.html">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Вязание на заказ</a>
+              <a href="form.html">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="nav__list user-list">
@@ -45,7 +45,7 @@
             <h2 class="description-shop__title">Милые штуки ручной работы для дома</h2>
           </div>
         </header>
-        <div class="description-shop__content content-shop">
+        <div class="content-shop">
           <ul class="content-shop__list container">
             <li class="content-shop__item">Предметы интерьера</li>
             <li class="content-shop__item">Детские игрушки</li>
@@ -54,127 +54,117 @@
       </section>
 
       <!--Блок с товаром недели-->
-      <aside class="product-week">
-        <div class="container"> <!--Блок центровщик-->
-          <h2 class="product-week__title">Вязаные корзинки</h2>
-          <h3>Товар недели</h3>
-          <p class="product-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <table class="product-week__list">
-            <tr>
-              <td class="product-week__field">Цвет:</td>
-              <td class="product-week__value">"Тиффани"/серый</td>
-            </tr>
-            <tr>
-              <td class="product-week__field">Диаметр:</td>
-              <td class="product-week__value">25 см</td>
-            </tr>
-            <tr>
-              <td class="product-week__field">Высота:</td>
-              <td class="product-week__value">15 см</td>
-            </tr>
-          </table>
-          <div class="product-week__image">
-            <img class="product-week__image-basket" src="http://placehold.it/150x100" width="260" height="315" alt="На картинке изображены вязаные корзинки">
-          </div>
-          <span class="product-week__price">Цена: 990 руб.</span>
-          <button class="description-week__button button" type="button">Заказать</button>
+      <article class="product-week container">
+        <h2 class="product-week__title">Вязаные корзинки</h2>
+        <h3>Товар недели</h3>
+        <p class="product-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="product-week__list">
+          <tr>
+            <td class="product-week__name">Цвет:</td>
+            <td class="product-week__value">"Тиффани"/серый</td>
+          </tr>
+          <tr>
+            <td class="product-week__name">Диаметр:</td>
+            <td class="product-week__value">25 см</td>
+          </tr>
+          <tr>
+            <td class="product-week__name">Высота:</td>
+            <td class="product-week__value">15 см</td>
+          </tr>
+        </table>
+        <div class="product-week__image">
+          <img class="product-week__image-basket" src="http://placehold.it/150x100" width="260" height="315" alt="На картинке изображены вязаные корзинки">
         </div>
-      </aside>
+        <span class="product-week__price">Цена: 990 руб.</span>
+        <button class="product-week__button button" type="button">Заказать</button>
+      </article>
 
       <!--Блок с преимуществами-->
-      <section class="advantages">
-        <h2 class="visually-hidden">Наши преимущества</h2>
-        <div class="container"> <!--Блок центровщик-->
-          <h2 class="advantages__title">Коротко о нас:</h2>
-          <ul class="advantages__list">
-            <li class="advatages__item">
-              <div class="advantages__item-image">
-                <img src="" alt="Изображен цветок">
-              </div>
-              Экологически чистые материалы
-            </li>
-            <li class="advatages__item">
-              <div class="advantages__item-image">
-                <img src="" alt="Изображена купюра">
-              </div>
-              Скандинавский стиль по российской цене
-            </li>
-            <li class="advatages__item">
-              <div class="advantages__item-image">
-                <img src="" alt="Изображено сердечко">
-              </div>
-              Увеличивает лайки на фотографиях
-            </li>
-            <li class="advatages__item">
-              <div class="advantages__item-image">
-                <img src="" alt="Изображен клубок ниток">
-              </div>
-              Связано вручную с любовью и умилением
-            </li>
-            <li class="advatages__item">
-              <div class="advantages__item-image">
-                <img src="" alt="Изображена ракета">
-              </div>
-              Поддержка отечественного производителя
-            </li>
-            <li class="advatages__item">
-              <div class="advantages__item-image">
-                <img src="" alt="Изображена подарочная упаковка">
-              </div>
-              Поставляется в подарочной упаковке
-            </li>
-          </ul>
-        </div>
+      <section class="advantages container">
+        <h2 class="advantages__title">Коротко о нас:</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <div class="advantages__item-image">
+              <img src="" alt="Изображен цветок">
+            </div>
+            Экологически чистые материалы
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__item-image">
+              <img src="" alt="Изображена купюра">
+            </div>
+            Скандинавский стиль по российской цене
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__item-image">
+              <img src="" alt="Изображено сердечко">
+            </div>
+            Увеличивает лайки на фотографиях
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__item-image">
+              <img src="" alt="Изображен клубок ниток">
+            </div>
+            Связано вручную с любовью и умилением
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__item-image">
+              <img src="" alt="Изображена ракета">
+            </div>
+            Поддержка отечественного производителя
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__item-image">
+              <img src="" alt="Изображена подарочная упаковка">
+            </div>
+            Поставляется в подарочной упаковке
+          </li>
+        </ul>
       </section>
       <!--Блок с отзывами-->
-      <section class="reviews">
-        <div class="container"> <!--Блок центровщик-->
-          <h2 class="reviews__title">Отзывы</h2>
-          <div class="reviews__wrapper slider">
-            <div class="reviews__list slider__list">
-              <div class="reviews__item slider__item">
-                <p class="reviews__description">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-                <span class="reviews__autor-name">Анастасия Красильникова</span>
-                <span class="reviews__autor-login">@misssssiskras</span>
-              </div>
-            </div>
-            <p class="reviews__toggles slider__toggles">
-              <button class="slider__toggle slider__toggle--prev" type="button">Предыдущий отзыв</button>
-              <button class="slider__toggle slider__toggle--next" type="button">Следующий отзыв</button>
-            </p>
-            <button class="reviews__button button" type="button">Написать</button>
+      <section class="reviews container">
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__wrapper slider">
+          <ul class="reviews__list slider__list">
+            <li class="reviews__item slider__item">
+              <p class="reviews__description">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <span class="reviews__autor-name">Анастасия Красильникова</span>
+              <span class="reviews__autor-login">@misssssiskras</span>
+            </li>
+          </ul>
+          <div class="reviews__toggles slider__toggles">
+            <button class="slider__toggle slider__toggle--prev" type="button">Предыдущий отзыв</button>
+            <button class="slider__toggle slider__toggle--next" type="button">Следующий отзыв</button>
           </div>
+          <a class="reviews__button button" href="#">Написать</a>
         </div>
       </section>
       <!--Блок с контактами-->
-      <section class="contacts">
-        <div class="container"> <!--Блок центровщик-->
-          <h2 class="contacts__title">Контакты</h2>
-          <table class="contacts__list">
-            <tr>
-              <td class="contacts__field">e-mail:</td>
-              <td class="contacts__value"><a href="#">info@mimimishkashop.ru</a></td>
-            </tr>
-            <tr>
-              <td class="contacts__field">Адрес:</td>
-              <td class="contacts__value"><address>г.Санкт-Петербург, ул. Большая Конюшная, д. 19/8, офис 101</address></td>
-            </tr>
-          </table>
-        </div>
+      <section class="contacts container">
+        <h2 class="contacts__title">Контакты</h2>
+        <table class="contacts__list">
+          <tr>
+            <td class="contacts__field">e-mail:</td>
+            <td class="contacts__value"><a target="_blank" rel="noopener" href="#">info@mimimishkashop.ru</a></td>
+          </tr>
+          <tr>
+            <td class="contacts__field">Адрес:</td>
+            <td class="contacts__value"><address>г.Санкт-Петербург, ул. Большая Конюшная, д. 19/8, офис 101</address></td>
+          </tr>
+        </table>
       </section>
       <!--Блок с картой-->
       <section class="map">
         <h2 class="visually-hidden">Карта с местоположением магазина</h2>
         <div class="container"> <!--Блок центровщик-->
-          <button class="map__button button" type="button">Напишите нам</button>
+          <a class="map__button button">Напишите нам</a>
         </div>
       </section>
     </main>
     <!--Подвал страницы-->
     <footer class="footer">
       <div class="container">
-        <h2 class="visually-hidden">Социальные кнопки</h2>
-        <ul class="social__list">
+        <ul class="social">
           <li class="social__item">
             <a href="" class="social__link social__link--instagram">Мы в Инстаграме</a>
           </li>
@@ -187,7 +177,7 @@
         </ul>
         <div class="footer__copyright copyright">
           <span class="copyright__text">Разработано:</span>
-          <a class="copyright__link" href="#" >
+          <a class="copyright__link" target="_blank" rel="noopener" href="#" >
             <img class="copyright__image" src="http://placehold.it/150x100" width="27" height="34" alt="Логотип Академии">
           </a>
         </div>

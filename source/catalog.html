@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Каталог товаров</title>
-</head>
-<body>
+  <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Каталог товаров</title>
+  </head>
+  <body>
   <!--Шапка страницы-->
     <header class="header">
-      <a class="header__logo" href="#">
+      <a class="header__logo" href="index.html">
         <img class="header__logo-image" src="http://placehold.it/150x100" width="90" height="35" alt="Логотип Мишка" >
       </a>
       <nav class="nav">
@@ -18,7 +18,7 @@
               <a href="#">Каталог товаров</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Вязание на заказ</a>
+              <a href="form.html">Вязание на заказ</a>
             </li>
           </ul>
           <ul class="nav__list user-list">
@@ -43,41 +43,43 @@
       </div>
 
       <!--Блок с товарами-->
-      <section class="catalog">
-        <div class="container"> <!--Блок центровщик-->
-          <ul class="catalog__list">
-            <li class="catalog__item product">
-              <div class="product__image">
-                <img src="http://placehold.it/150x100" width="260" height="195" alt="На рисунке изображен вязаный заец">
-              </div>
-              <div class="product__info">
-                <h2 class="product__title">Зайчик-попрыгайчик</h2>
-                <span class="product__characteristic">Рост 30 см, вес 200 г</span>
-                <span class="product__price">1 200 руб.</span>
-              </div>
-            </li>
-            <li class="catalog__item product">
-              <div class="product__image">
-                <img src="http://placehold.it/150x100" width="260" height="195" alt="На рисунке изображена вязаная корзинка">
-              </div>
-              <div class="product__info">
-                <h2 class="product__title">Корзинка для белья</h2>
-                <span class="product__characteristic">Диаметр 15 см, высота 10 см</span>
-                <span class="product__price"> 690 руб.</span>
-              </div>
-            </li>
-            <li class="catalog__item product">
-              <div class="product__image">
-                <img src="http://placehold.it/150x100" width="260" height="195" alt="На рисунке изображена большая вязаная корзинка">
-              </div>
-              <div class="product__info">
-                <h2 class="product__title">Большая корзинка для игрушек</h2>
-                <span class="product__characteristic">Диаметр 30 см, высота 30 см</span>
-                <span class="product__price">1 500 руб.</span>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <section class="catalog container">
+        <h2 class="visually-hidden">Каталог товаров</h2>
+        <ul class="catalog__list">
+          <li class="catalog__item product">
+            <div class="product__image">
+              <img src="http://placehold.it/150x100" width="260" height="195" alt="На рисунке изображен вязаный заец">
+            </div>
+            <div class="product__info">
+              <h2 class="product__title">Зайчик-попрыгайчик</h2>
+              <span class="product__characteristic">Рост 30 см, вес 200 г</span>
+              <span class="product__price">1 200 руб.</span>
+              <button class="product__button button" type="button">Добавить в корзину</button>
+            </div>
+          </li>
+          <li class="catalog__item product">
+            <div class="product__image">
+              <img src="http://placehold.it/150x100" width="260" height="195" alt="На рисунке изображена вязаная корзинка">
+            </div>
+            <div class="product__info">
+              <h2 class="product__title">Корзинка для белья</h2>
+              <span class="product__characteristic">Диаметр 15 см, высота 10 см</span>
+              <span class="product__price"> 690 руб.</span>
+              <button class="product__button button" type="button">Добавить в корзину</button>
+            </div>
+          </li>
+          <li class="catalog__item product">
+            <div class="product__image">
+              <img src="http://placehold.it/150x100" width="260" height="195" alt="На рисунке изображена большая вязаная корзинка">
+            </div>
+            <div class="product__info">
+              <h2 class="product__title">Большая корзинка для игрушек</h2>
+              <span class="product__characteristic">Диаметр 30 см, высота 30 см</span>
+              <span class="product__price">1 500 руб.</span>
+              <button class="product__button button" type="button">Добавить в корзину</button>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <!--Блок процесса производства-->
@@ -99,7 +101,7 @@
     <footer class="footer">
       <div class="container">
         <h2 class="visually-hidden">Социальные кнопки</h2>
-        <ul class="social__list">
+        <ul class="social">
           <li class="social__item">
             <a href="" class="social__link social__link--instagram">Мы в Инстаграме</a>
           </li>
