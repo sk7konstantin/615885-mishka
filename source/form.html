@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма магазина</title>
+</head>
+<body>
+  <div class="wrapper">
+    <!--Шапка страницы-->
+    <header class="header">
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-image" src="http://placehold.it/150x100" width="90" height="35" alt="Логотип Мишка" >
+      </a>
+      <nav class="nav">
+        <button class="nav__toggle" type="button">Открыть меню</button>
+        <div class="nav__wrapper">
+          <ul class="nav__list site-list">
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Вязание на заказ</a>
+            </li>
+          </ul>
+          <ul class="nav__list user-list">
+            <li class="user-list__item user-list__item--icon-search">
+              <label class="visually-hidden" for="user-search">Поиск по сайту</label>
+              <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
+            </li>
+            <li class="user-list__item user-list__item--icon-basket">
+              <a class="user-list__basket" href="#">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="">
+      <!--Блок с названием страницы-->
+      <div class="page-title">
+        <div class="container"> <!--Блок центровщик-->
+          <h1>Вязание на заказ</h1>
+        </div>
+      </div>
+
+      <!--Блок с оформлением заказа-->
+      <section class="order container">
+        <h2 class="visually-hidden">Оформление заказа</h2>
+        <p class="order__description">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+              <!--Блок с типом заказа-->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Тип</legend>
+            <div class="form__input-box">
+              <input class="visually-hidden" type="radio" name="type-accessory" id="accessory">
+              <label class="form__box-type" for="accessory">Аксессуар для интерьера</label>
+            </div>
+            <div class="form__input-box">
+              <input class="visually-hidden" type="radio" name="type-accessory" id="kids-game">
+              <label class="form__box-type" for="kids-game">Детская игрушка</label>
+            </div>
+          </fieldset>
+            <!--Блок с выбором цвета-->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Цвет</legend>
+            <div class="form__input-box">
+              <input class="visually-hidden" type="checkbox" name="color-white" id="type-white">
+              <label class="form__box-color" for="type-white">Белый</label>
+            </div>
+            <div class="form__input-box">
+              <input class="visually-hidden" type="checkbox" name="color-gray" id="type-gray">
+              <label class="form__box-color" for="type-gray">Серый</label>
+            </div>
+            <div class="form__input-box">
+              <input class="visually-hidden" type="checkbox" name="color-tifany" id="type-tifany">
+              <label class="form__box-color" for="type-tifany">"Тиффани"</label>
+            </div>
+            <div class="form__input-box">
+              <input class="visually-hidden" type="checkbox" name="color-black" id="type-black">
+              <label class="form__box-color" for="type-black">Черный</label>
+            </div>
+            <div class="form__input-box">
+              <input class="visually-hidden" type="checkbox" name="color-pink" id="type-pink">
+              <label class="form__box-color" for="type-pink">Розовый</label>
+            </div>
+            <div class="form__input-box">
+              <input class="visually-hidden" type="checkbox" name="color-orange" id="type-orange">
+              <label class="form__box-color" for="type-orange">Оранжевый</label>
+            </div>
+          </fieldset>
+            <!--Блок с данными пользователя-->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">ФИО</legend>
+            <div class="form__input-box">
+              <label for="name">Имя:</label>
+              <input type="text" id="name" name="name" placeholder="Введите ваше имя*">
+            </div>
+            <div class="form__input-box">
+              <label for="surname">Фамилия:</label>
+              <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
+            </div>
+            <div class="form__input-box">
+              <label for="patronymic">Отчество:</label>
+              <input type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+            </div>
+          </fieldset>
+            <!--Блок с номером телефона-->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Тел</legend>
+            <div class="form__input-box form__phone-item--icon">
+                <label for="number-phone">Номер телефона:</label>
+                <input type="tel" id="number-phone" name="phone" placeholder="+7 XXX XXX XX XX*">
+            </div>
+          </fieldset>
+            <!--Блок с email-->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">e-mail</legend>
+            <div class="form__input-box form__email-item--icon">
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="email" placeholder="Ваш Email*">
+            </div>
+          </fieldset>
+            <!--Блок с комменатарием к заказу-->
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Доп</legend>
+            <label for="comment">Коментарий к заказу:</label>
+            <textarea name="comments" id="comment" cols="15" rows="3" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </fieldset>
+          <small><sup>*</sup>Поля обязательны для заполнения</small>
+          <button class="form__button button" type="submit">Отправить заказ</button>
+        </form>
+      </section>
+    </main>
+
+    <!--Подвал страницы-->
+    <footer class="footer">
+      <div class="container">
+        <h2 class="visually-hidden">Социальные кнопки</h2>
+        <ul class="social">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="" rel="noopener">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="" rel="noopener">Мы в Фейсбуке</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twiter" href="" rel="noopener">Мы в Твитере</a>
+            </li>
+          </ul>
+        <div class="footer__copyright copyright">
+          <span class="copyright__text">Разработано:</span>
+          <a class="copyright__link" target="_blank" rel="noopener" href="#" >
+            <img class="copyright__image" src="http://placehold.it/150x100" width="27" height="34" alt="Логотип Академии">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
