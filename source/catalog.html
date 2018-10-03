@@ -8,28 +8,30 @@
   <body>
     <div class="wrapper">
     <!--Шапка страницы-->
-      <header class="header">
-        <a class="header__logo" href="index.html">
-          <img class="header__logo-image" src="http://placehold.it/150x100" width="90" height="35" alt="Логотип Мишка" >
-        </a>
+     <header class="header">
         <nav class="nav">
+          <a class="header__logo nav__link container" href="index.html">
+            <img class="header__logo-image" src="img/logo-mobile.svg" width="90" height="35" alt="Логотип Мишка" >
+          </a>
           <button class="nav__toggle" type="button">Открыть меню</button>
           <div class="nav__wrapper">
-            <ul class="nav__list site-list">
+            <ul class="nav__list site-list list-style-none">
               <li class="site-list__item">
-                <a href="#">Каталог товаров</a>
+                <a class="nav__link link container" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="site-list__item">
-                <a href="form.html">Вязание на заказ</a>
+                <a class="nav__link link container" href="form.html">Вязание на заказ</a>
               </li>
             </ul>
-            <ul class="nav__list user-list">
+            <ul class="nav__list user-list list-style-none">
               <li class="user-list__item user-list__item--icon-search">
-                <label class="visually-hidden" for="user-search">Поиск по сайту</label>
-                <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
+                <div class="user-list__item-box container">
+                  <label class="visually-hidden" for="user-search">Поиск по сайту</label>
+                  <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
+                </div>
               </li>
               <li class="user-list__item user-list__item--icon-basket">
-                <a class="user-list__basket" href="#">Корзина: пока пуста</a>
+                <a class="nav__link link container user-list__basket" href="#">Корзина: пока пуста</a>
               </li>
             </ul>
           </div>
@@ -38,47 +40,53 @@
 
       <main class="catalog">
         <!--Блок с названием страницы-->
-        <div class="page-title">
+        <div class="page-title-box">
           <div class="container"> <!--Блок центровщик-->
-            <h1>Каталог товаров</h1>
+            <h1 class="page-title">Каталог товаров</h1>
           </div>
         </div>
 
         <!--Блок с товарами-->
-        <section class="catalog container">
+        <section class="catalogs container">
           <h2 class="visually-hidden">Каталог товаров</h2>
-          <ul class="catalog__list">
-            <li class="catalog__item product">
+          <ul class="catalog__list list-style-none">
+            <li class="catalog__item product catalog-margin-bottom">
               <div class="product__image">
-                <img src="http://placehold.it/150x100" width="260" height="195" alt="На рисунке изображен вязаный заец">
+                <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображен вязаный заец">
               </div>
               <div class="product__info">
-                <h2 class="product__title">Зайчик-попрыгайчик</h2>
+                <h2 class="product__title catalog-product-title">Зайчик-попрыгайчик</h2>
                 <span class="product__characteristic">Рост 30 см, вес 200 г</span>
                 <span class="product__price">1 200 руб.</span>
-                <button class="product__button button" type="button">Добавить в корзину</button>
+                <button class="product__button" type="button">
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </button>
               </div>
             </li>
-            <li class="catalog__item product">
+            <li class="catalog__item product catalog-margin-bottom">
               <div class="product__image">
-                <img src="http://placehold.it/150x100" width="260" height="195" alt="На рисунке изображена вязаная корзинка">
+                <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображена вязаная корзинка">
               </div>
               <div class="product__info">
-                <h2 class="product__title">Корзинка для белья</h2>
+                <h2 class="product__title catalog-product-title">Корзинка для белья</h2>
                 <span class="product__characteristic">Диаметр 15 см, высота 10 см</span>
                 <span class="product__price"> 690 руб.</span>
-                <button class="product__button button" type="button">Добавить в корзину</button>
+                <button class="product__button" type="button">
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </button>
               </div>
             </li>
-            <li class="catalog__item product">
+            <li class="catalog__item product catalog-margin-bottom">
               <div class="product__image">
-                <img src="http://placehold.it/150x100" width="260" height="195" alt="На рисунке изображена большая вязаная корзинка">
+                <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображена большая вязаная корзинка">
               </div>
               <div class="product__info">
-                <h2 class="product__title">Большая корзинка для игрушек</h2>
+                <h2 class="product__title catalog-product-title">Большая корзинка для игрушек</h2>
                 <span class="product__characteristic">Диаметр 30 см, высота 30 см</span>
                 <span class="product__price">1 500 руб.</span>
-                <button class="product__button button" type="button">Добавить в корзину</button>
+                <button class="product__button" type="button">
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </button>
               </div>
             </li>
           </ul>
@@ -86,13 +94,13 @@
 
         <!--Блок процесса производства-->
         <section class="production container">
-          <div class="production__title">
-            <h2>Процесс производства</h2>
+          <div class="production__title-box">
+            <h2 class="production__title catalog-product-title">Процесс производства</h2>
           </div>
           <div class="production__image">
-            <img src="http://placehold.it/150x100" width="260" height="150" alt="">
+            <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="">
           </div>
-          <div class="production__info">
+          <div class="production__info catalog-margin-bottom">
             <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
             <button class="production__button button" type="button">Сделать заказ</button>
           </div>
@@ -102,22 +110,27 @@
       <!--Подвал страницы-->
       <footer class="footer">
         <div class="container">
-          <h2 class="visually-hidden">Социальные кнопки</h2>
-          <ul class="social">
+          <ul class="social list-style-none">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="" rel="noopener">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram" href="" rel="noopener">
+                <span class="visually-hidden">Мы в Инстаграме</span>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="" rel="noopener">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="" rel="noopener">
+                <span class="visually-hidden">Мы в Фейсбуке</span>
+              </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--twiter" href="" rel="noopener">Мы в Твитере</a>
+              <a class="social__link social__link--twiter" href="" rel="noopener">
+                <span class="visually-hidden">Мы в Твитере</span>
+              </a>
             </li>
           </ul>
           <div class="footer__copyright copyright">
-            <span class="copyright__text">Разработано:</span>
+            <span class="copyright__text">Разработано</span>
             <a class="copyright__link" target="_blank" rel="noopener" href="#" >
-              <img class="copyright__image" src="http://placehold.it/150x100" width="27" height="34" alt="Логотип Академии">
+              <img class="copyright__image" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип Академии">
             </a>
           </div>
         </div>

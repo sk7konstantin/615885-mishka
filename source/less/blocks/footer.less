@@ -1,0 +1,51 @@
+.footer {
+  background-color: #f1f1f1;
+  padding-bottom: 35px;
+}
+
+.social {
+  // padding: 25px 0;
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+
+  &__item {
+    display: inline-block;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    &::before {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 21px;
+      background-image: url("../img/icon-insta.svg");
+      background-repeat: no-repeat;
+    }
+
+    &--facebook::before {
+      background-image: url("../img/icon-fb.svg");
+      width: 15px;
+      height: 28px;
+    }
+
+    &--twiter::before {
+      background-image: url("../img/icon-twitter.svg");
+      width: 23px;
+      height: 20px;
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+
+  &__text {
+    line-height: 19px;
+    font-weight: bold;
+  }
+}
