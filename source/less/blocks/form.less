@@ -1,6 +1,11 @@
+.order {
+  padding-top: 15px;
+  padding-bottom: 55px;
+}
+
 .order__description {
   font-size: 13px;
-  margin: 25px 0;
+  margin-bottom: 25px;
 }
 
 .form {
@@ -8,61 +13,58 @@
   line-height: 17px;
   font-weight: bold;
   color: #000000;
+}
 
-  &__fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
+.form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.form__legend {
+  color: #63d1bb;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+
+.form__box-title {
+  display: block;
+}
+
+.form__input-element {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 20px;
+  padding: 10px 0;
+
+  &::placeholder {
+    font-size: 17px;
   }
+}
 
-  &__legend {
-    color: #63d1bb;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-  }
+.form__input-box-title {
+  margin-bottom: 15px;
+}
 
-  &__box-title {
-    display: block;
-  }
+.form__input-textarea {
+  width: 100%;
+  border: 2px solid #000000;
+  padding: 10px;
 
-  &__input-element {
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #000000;
-    margin-bottom: 20px;
-    padding: 10px 0;
-
-    &::placeholder {
-      font-size: 17px;
-    }
-  }
-
-  &__input-box-title {
-    margin-bottom: 15px;
-  }
-
-  &__input-textarea {
-    width: 100%;
-    border: 2px solid #000000;
-
-    &::placeholder {
-      font-size: 17px;
-    }
-  }
-
-  &__button {
-    margin-bottom: 55px;
+  &::placeholder {
+    font-size: 17px;
   }
 }
 
 .form__box-type,
 .form__box-color {
-  margin-left: 55px;
+  padding-left: 55px;
   margin-bottom: 35px;
 }
 
-.text-required {
+.text-small {
   display: block;
   font-weight: 400;
   margin-bottom: 20px;
