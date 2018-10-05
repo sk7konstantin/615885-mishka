@@ -3,43 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>Форма магазина</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="wrapper">
     <!--Шапка страницы-->
     <header class="header">
-      <a class="header__logo" href="index.html">
-        <img class="header__logo-image" src="http://placehold.it/150x100" width="90" height="35" alt="Логотип Мишка" >
-      </a>
-      <nav class="nav">
-        <button class="nav__toggle" type="button">Открыть меню</button>
-        <div class="nav__wrapper">
-          <ul class="nav__list site-list">
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Вязание на заказ</a>
-            </li>
-          </ul>
-          <ul class="nav__list user-list">
-            <li class="user-list__item user-list__item--icon-search">
-              <label class="visually-hidden" for="user-search">Поиск по сайту</label>
-              <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
-            </li>
-            <li class="user-list__item user-list__item--icon-basket">
-              <a class="user-list__basket" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+        <nav class="nav">
+          <a class="header__logo nav__link container" href="index.html">
+            <img class="header__logo-image" src="img/logo-mobile.svg" width="90" height="35" alt="Логотип Мишка" >
+          </a>
+          <button class="nav__toggle" type="button">Открыть меню</button>
+          <div class="nav__wrapper">
+            <ul class="nav__list site-list list-reset">
+              <li class="site-list__item">
+                <a class="nav__link link-block container" href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="site-list__item">
+                <a class="nav__link link-block container" href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="nav__list user-list list-reset">
+              <li class="user-list__item user-list__item--icon-search">
+                <div class="user-list__item-box container">
+                  <label class="visually-hidden" for="user-search">Поиск по сайту</label>
+                  <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
+                </div>
+              </li>
+              <li class="user-list__item user-list__item--icon-basket">
+                <a class="nav__link link-block container user-list__basket" href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 
     <main class="">
       <!--Блок с названием страницы-->
-      <div class="page-title">
+      <div class="page-title-box">
         <div class="container"> <!--Блок центровщик-->
-          <h1>Вязание на заказ</h1>
+          <h1 class="page-title">Вязание на заказ</h1>
         </div>
       </div>
 
@@ -55,11 +58,11 @@
             <legend class="form__legend">Тип</legend>
             <div class="form__input-box">
               <input class="visually-hidden" type="radio" name="type-accessory" id="accessory">
-              <label class="form__box-type" for="accessory">Аксессуар для интерьера</label>
+              <label class="form__box-type form__box-title" for="accessory">Аксессуар для интерьера</label>
             </div>
             <div class="form__input-box">
               <input class="visually-hidden" type="radio" name="type-accessory" id="kids-game">
-              <label class="form__box-type" for="kids-game">Детская игрушка</label>
+              <label class="form__box-type form__box-title" for="kids-game">Детская игрушка</label>
             </div>
           </fieldset>
             <!--Блок с выбором цвета-->
@@ -67,68 +70,68 @@
             <legend class="form__legend">Цвет</legend>
             <div class="form__input-box">
               <input class="visually-hidden" type="checkbox" name="color-white" id="type-white">
-              <label class="form__box-color" for="type-white">Белый</label>
+              <label class="form__box-color form__box-title" for="type-white">Белый</label>
             </div>
             <div class="form__input-box">
               <input class="visually-hidden" type="checkbox" name="color-gray" id="type-gray">
-              <label class="form__box-color" for="type-gray">Серый</label>
+              <label class="form__box-color form__box-title" for="type-gray">Серый</label>
             </div>
             <div class="form__input-box">
               <input class="visually-hidden" type="checkbox" name="color-tifany" id="type-tifany">
-              <label class="form__box-color" for="type-tifany">"Тиффани"</label>
+              <label class="form__box-color form__box-title" for="type-tifany">"Тиффани"</label>
             </div>
             <div class="form__input-box">
               <input class="visually-hidden" type="checkbox" name="color-black" id="type-black">
-              <label class="form__box-color" for="type-black">Черный</label>
+              <label class="form__box-color form__box-title" for="type-black">Черный</label>
             </div>
             <div class="form__input-box">
               <input class="visually-hidden" type="checkbox" name="color-pink" id="type-pink">
-              <label class="form__box-color" for="type-pink">Розовый</label>
+              <label class="form__box-color form__box-title" for="type-pink">Розовый</label>
             </div>
             <div class="form__input-box">
               <input class="visually-hidden" type="checkbox" name="color-orange" id="type-orange">
-              <label class="form__box-color" for="type-orange">Оранжевый</label>
+              <label class="form__box-color form__box-title" for="type-orange">Оранжевый</label>
             </div>
           </fieldset>
             <!--Блок с данными пользователя-->
           <fieldset class="form__fieldset">
             <legend class="form__legend">ФИО</legend>
             <div class="form__input-box">
-              <label for="name">Имя:</label>
-              <input type="text" id="name" name="name" placeholder="Введите ваше имя*">
+              <label class="form__box-title form__input-box-title" for="name">Имя:</label>
+              <input class="form__input-element" type="text" id="name" name="name" placeholder="Введите ваше имя*">
             </div>
             <div class="form__input-box">
-              <label for="surname">Фамилия:</label>
-              <input type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
+              <label class="form__box-title form__input-box-title" for="surname">Фамилия:</label>
+              <input class="form__input-element" type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
             </div>
             <div class="form__input-box">
-              <label for="patronymic">Отчество:</label>
-              <input type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+              <label class="form__box-title form__input-box-title" for="patronymic">Отчество:</label>
+              <input class="form__input-element" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
             </div>
           </fieldset>
             <!--Блок с номером телефона-->
           <fieldset class="form__fieldset">
             <legend class="form__legend">Тел</legend>
             <div class="form__input-box form__phone-item--icon">
-                <label for="number-phone">Номер телефона:</label>
-                <input type="tel" id="number-phone" name="phone" placeholder="+7 XXX XXX XX XX*">
+                <label class="form__box-title form__input-box-title" for="number-phone">Номер телефона:</label>
+                <input class="form__input-element" type="tel" id="number-phone" name="phone" placeholder="+7 XXX XXX XX XX*">
             </div>
           </fieldset>
             <!--Блок с email-->
           <fieldset class="form__fieldset">
             <legend class="form__legend">e-mail</legend>
             <div class="form__input-box form__email-item--icon">
-                <label for="mail">Email:</label>
-                <input type="email" id="mail" name="email" placeholder="Ваш Email*">
+                <label class="form__box-title form__input-box-title" for="mail">Email:</label>
+                <input class="form__input-element" type="email" id="mail" name="email" placeholder="Ваш Email*">
             </div>
           </fieldset>
             <!--Блок с комменатарием к заказу-->
           <fieldset class="form__fieldset">
             <legend class="form__legend">Доп</legend>
-            <label for="comment">Коментарий к заказу:</label>
-            <textarea name="comments" id="comment" cols="15" rows="3" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <label class="form__box-title form__input-box-title" for="comment">Коментарий к заказу:</label>
+            <textarea class="form__input-textarea" name="comments" id="comment" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
-          <small><sup>*</sup>Поля обязательны для заполнения</small>
+          <small class="text-small"><sup>*</sup>Поля обязательны для заполнения</small>
           <button class="form__button button" type="submit">Отправить заказ</button>
         </form>
       </section>
@@ -137,22 +140,27 @@
     <!--Подвал страницы-->
     <footer class="footer">
       <div class="container">
-        <h2 class="visually-hidden">Социальные кнопки</h2>
-        <ul class="social">
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="" rel="noopener">Мы в Инстаграме</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="" rel="noopener">Мы в Фейсбуке</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--twiter" href="" rel="noopener">Мы в Твитере</a>
-            </li>
-          </ul>
+        <ul class="social footer__container list-reset">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="" rel="noopener">
+              <span class="visually-hidden">Мы в Инстаграме</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="" rel="noopener">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twiter" href="" rel="noopener">
+              <span class="visually-hidden">Мы в Твитере</span>
+            </a>
+          </li>
+        </ul>
         <div class="footer__copyright copyright">
-          <span class="copyright__text">Разработано:</span>
+          <span class="copyright__text">Разработано</span>
           <a class="copyright__link" target="_blank" rel="noopener" href="#" >
-            <img class="copyright__image" src="http://placehold.it/150x100" width="27" height="34" alt="Логотип Академии">
+            <img class="copyright__image" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип Академии">
           </a>
         </div>
       </div>
