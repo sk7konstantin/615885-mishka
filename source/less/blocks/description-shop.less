@@ -1,9 +1,14 @@
+.description-shop {
+  margin-bottom: 30px;
+}
+
 .description-shop__header {
   background-image: url("../img/hero-mobile@1x.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 282px;
+  padding-top: 75px;
 }
 
 .description-shop__title {
@@ -14,5 +19,43 @@
 }
 
 .description-shop__container {
-  padding-top: 70px;
+  .container;
+}
+
+@media (min-width: 768px) {
+  .description-shop {
+    margin-bottom: 50px;
+  }
+
+  .description-shop__header {
+    margin-top: -90px;
+    background-image: url("../img/hero-tablet@1x.jpg");
+    min-height: 740px;
+    padding-top: 100px;
+  }
+
+  .description-shop__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .description-shop__container {
+    .container-tablet;
+  }
+}
+
+@media (min-width: 1150px) {
+  .description-shop {
+    margin-bottom: 70px;
+  }
+
+  .description-shop__header {
+    margin-top: 0;
+    background-image: url("../img/hero-desktop@1x.jpg");
+  }
+
+  .description-shop__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
