@@ -10,13 +10,20 @@ body {
 }
 
 .wrapper {
+  width: 320px;
   min-height: 650px;
   overflow: hidden;
   outline: 1px solid green;
+  margin: 0 auto;
 }
 
 .container {
   margin: 0 30px;
+  // outline: 1px dashed blue;
+}
+
+.container-tablet {
+  margin: 0 50px;
   // outline: 1px dashed blue;
 }
 
@@ -32,4 +39,16 @@ body {
   text-decoration: none;
   color: #000000;
   display: block;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .wrapper {
+    width: 1150px;
+  }
 }

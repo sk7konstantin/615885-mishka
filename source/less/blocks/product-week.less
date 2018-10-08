@@ -1,6 +1,8 @@
 .product-week {
+  .container;
   padding-top: 30px;
   padding-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .product-week__title {
@@ -19,11 +21,13 @@
   margin: 25px 0;
 }
 
+.product-week__table-box {
+  margin-bottom: 40px;
+}
+
 .product-week__table {
-  width: 100%;
   font-size: 15px;
   border-collapse: collapse;
-  margin-bottom: 25px;
 }
 
 .product-week__row {
@@ -32,10 +36,17 @@
 
 .product-week__cell {
   padding: 10px 0;
+  padding-right: 50px;
+  width: 100%;
 }
 
 .product-week__image {
   margin-bottom: 20px;
+  width: 260px;
+  height: 315px;
+  background-image: url("../img/triple-set-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .product-week__price {
@@ -45,4 +56,113 @@
   color: #444444;
   text-align: center;
   margin-bottom: 25px;
+}
+
+
+@media (min-width: 768px) {
+  .product-week {
+    .container-tablet;
+    // min-height: 570px;
+    margin-bottom: 50px;
+  }
+
+  .product-week__box-title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .product-week__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .product-week__title-small {
+    width: 100px;
+    text-align: center;
+  }
+
+  .product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    flex-wrap: wrap;
+    height: 400px;
+  }
+
+  .product-week__description {
+    font-size: 17px;
+    width: 334px;
+    padding-right: 45px;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  .product-week__table-box {
+    width: 334px;
+    padding-right: 30px;
+  }
+
+  .product-week__price {
+    font-size: 20px;
+    width: 334px;
+    padding-right: 45px;
+  }
+
+  .product-week__button-box {
+    width: 334px;
+    padding-right: 45px;
+  }
+
+  .product-week__image {
+    order: 1;
+    width: 333px;
+    height: 404px;
+    margin: 0;
+    background-image: url("../img/triple-set-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: 1150px) {
+  .product-week {
+    position: relative;
+    min-height: 640px;
+    padding-left: 175px;
+    padding-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .product-container {
+    height: 480px;
+  }
+
+  .product-week__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 525px;
+    height: 634px;
+    background-image: url("../img/triple-set-desktop@1x.jpg");
+  }
+
+  .product-week__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .product-week__title-small {
+    position: absolute;
+    left: -130px;
+  }
+
+  .product-week__description {
+    margin-bottom: 55px;
+  }
+
+  .product-week__table-box {
+    margin-bottom: 78px;
+  }
 }

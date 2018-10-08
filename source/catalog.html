@@ -4,59 +4,65 @@
     <meta charset="UTF-8">
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width">
   </head>
   <body>
     <div class="wrapper">
     <!--Шапка страницы-->
-      <header class="header">
+      <header class="header header-container">
         <nav class="nav">
-          <a class="header__logo nav__link container" href="index.html">
-            <img class="header__logo-image" src="img/logo-mobile.svg" width="90" height="35" alt="Логотип Мишка" >
+          <a class="header__logo nav__link" href="index.html">
+            <!-- <img class="header__logo-image" src="img/logo-mobile.svg" width="90" height="35" alt="Логотип Мишка" > -->
           </a>
           <button class="nav__toggle" type="button">Открыть меню</button>
-          <div class="nav__wrapper">
+          <!-- <div class="nav__wrapper"> -->
             <ul class="nav__list site-list list-reset">
               <li class="site-list__item">
-                <a class="nav__link link-block container" href="catalog.html">Каталог товаров</a>
+                <a class="nav__link link-block" href="#">Каталог товаров</a>
               </li>
               <li class="site-list__item">
-                <a class="nav__link link-block container" href="form.html">Вязание на заказ</a>
+                <a class="nav__link link-block" href="form.html">Вязание на заказ</a>
               </li>
             </ul>
             <ul class="nav__list user-list list-reset">
               <li class="user-list__item user-list__item--icon-search">
-                <div class="user-list__item-box container">
-                  <label class="visually-hidden" for="user-search">Поиск по сайту</label>
-                  <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
+                <div class="user-list__item-box nav__link">
+                  <form action="https://echo.htmlacademy.ru" method="get">
+                    <label class="visually-hidden" for="user-search">Поиск по сайту</label>
+                    <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
+                  </form>
                 </div>
               </li>
               <li class="user-list__item user-list__item--icon-basket">
-                <a class="nav__link link-block container user-list__basket" href="#">Корзина: пока пуста</a>
+                <a class="nav__link link-block user-list__basket" href="#">Корзина: пока пуста</a>
               </li>
             </ul>
-          </div>
+          <!-- </div> -->
         </nav>
       </header>
 
       <main class="catalog">
         <!--Блок с названием страницы-->
         <div class="page-title-box">
-          <div class="container"> <!--Блок центровщик-->
+          <!-- <div class="container">  --><!--Блок центровщик-->
             <h1 class="page-title">Каталог товаров</h1>
-          </div>
+          <!-- </div> -->
         </div>
 
         <!--Блок с товарами-->
-        <section class="catalogs container">
+        <section class="catalogs">
           <h2 class="visually-hidden">Каталог товаров</h2>
           <ul class="catalog__list list-reset">
             <li class="catalog__item product">
-              <div class="product__image">
-                <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображен вязаный заец">
+              <div class="product__image product__image--hare">
+                <a class="product__image-link" href="#"></a>
+                <!-- <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображен вязаный заец"> -->
               </div>
               <div class="product__info">
-                <h2 class="product__title">Зайчик-попрыгайчик</h2>
-                <div class="product__characteristic">Рост 30 см, вес 200 г</div>
+                <div class="product__name-box">
+                  <a class="product__title" href="#">Зайчик-попрыгайчик</a>
+                  <div class="product__characteristic">Рост 30 см, вес 200 г</div>
+                </div>
                 <div class="product__price-box">
                   <span class="product__price">1 200 руб.</span>
                   <button class="product__button" type="button">
@@ -66,12 +72,15 @@
               </div>
             </li>
             <li class="catalog__item product">
-              <div class="product__image">
-                <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображена вязаная корзинка">
+              <div class="product__image product__image--bowl">
+                <a class="product__image-link" href="#"></a>
+                <!-- <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображена вязаная корзинка"> -->
               </div>
               <div class="product__info">
-                <h2 class="product__title">Корзинка для белья</h2>
-                <div class="product__characteristic">Диаметр 15 см, высота 10 см</div>
+                <div class="product__name-box">
+                  <a class="product__title" href="#">Корзинка для белья</a>
+                  <div class="product__characteristic">Диаметр 15 см, высота 10 см</div>
+                </div>
                 <div class="product__price-box">
                   <span class="product__price">690 руб.</span>
                   <button class="product__button" type="button">
@@ -81,12 +90,15 @@
               </div>
             </li>
             <li class="catalog__item product">
-              <div class="product__image">
-                <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображена большая вязаная корзинка">
+              <div class="product__image product__image--toys">
+                <a class="product__image-link" href="#"></a>
+                <!-- <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображена большая вязаная корзинка"> -->
               </div>
               <div class="product__info">
-                <h2 class="product__title">Большая корзинка для игрушек</h2>
-                <div class="product__characteristic">Диаметр 30 см, высота 30 см</div>
+                <div class="product__name-box">
+                  <a class="product__title" href="#">Большая корзинка для игрушек</a>
+                  <div class="product__characteristic">Диаметр 30 см, высота 30 см</div>
+                </div>
                 <div class="product__price-box">
                   <span class="product__price">1 500 руб.</span>
                   <button class="product__button" type="button">
@@ -99,12 +111,12 @@
         </section>
 
         <!--Блок процесса производства-->
-        <section class="production container">
+        <section class="production">
           <div class="production__title-box">
             <h2 class="production__title product__title">Процесс производства</h2>
           </div>
           <div class="production__image">
-            <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="">
+            <!-- <img src="img/video-mobile@1x.jpg" width="260" height="150" alt=""> -->
           </div>
           <div class="production__info">
             <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -115,8 +127,13 @@
 
       <!--Подвал страницы-->
       <footer class="footer">
-        <div class="container">
-          <ul class="social footer__container list-reset">
+        <div class="footer__wrapper-container">
+          <div class="footer__logo">
+            <a href="index.html">
+              <img src="img/logo-footer.svg" width="102" height="34" alt="">
+            </a>
+          </div>
+          <ul class="social footer__list-container list-reset">
             <li class="social__item">
               <a class="social__link social__link--instagram" href="" rel="noopener">
                 <span class="visually-hidden">Мы в Инстаграме</span>
