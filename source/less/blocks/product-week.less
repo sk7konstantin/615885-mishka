@@ -21,10 +21,13 @@
   margin: 25px 0;
 }
 
+.product-week__table-box {
+  margin-bottom: 40px;
+}
+
 .product-week__table {
   font-size: 15px;
   border-collapse: collapse;
-  margin-bottom: 25px;
 }
 
 .product-week__row {
@@ -64,10 +67,11 @@
   }
 
   .product-week__box-title {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 
   .product-week__title {
@@ -83,6 +87,7 @@
   .product-container {
     display: flex;
     flex-direction: column;
+    align-items: space-between;
     flex-wrap: wrap;
     height: 400px;
   }
@@ -92,12 +97,12 @@
     width: 334px;
     padding-right: 45px;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
   .product-week__table-box {
     width: 334px;
-    padding-right: 45px;
+    padding-right: 30px;
   }
 
   .product-week__price {
@@ -115,6 +120,7 @@
     order: 1;
     width: 333px;
     height: 404px;
+    margin: 0;
     background-image: url("../img/triple-set-tablet@1x.jpg");
   }
 }
@@ -124,7 +130,12 @@
     position: relative;
     min-height: 640px;
     padding-left: 175px;
+    padding-top: 60px;
     margin-bottom: 80px;
+  }
+
+  .product-container {
+    height: 480px;
   }
 
   .product-week__image {
@@ -140,5 +151,18 @@
   .product-week__title {
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .product-week__title-small {
+    position: absolute;
+    left: -130px;
+  }
+
+  .product-week__description {
+    margin-bottom: 55px;
+  }
+
+  .product-week__table-box {
+    margin-bottom: 78px;
   }
 }

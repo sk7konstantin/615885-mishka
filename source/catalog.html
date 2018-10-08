@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width">
   </head>
   <body>
     <div class="wrapper">
@@ -26,8 +27,10 @@
             <ul class="nav__list user-list list-reset">
               <li class="user-list__item user-list__item--icon-search">
                 <div class="user-list__item-box nav__link">
-                  <label class="visually-hidden" for="user-search">Поиск по сайту</label>
-                  <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
+                  <form action="https://echo.htmlacademy.ru" method="get">
+                    <label class="visually-hidden" for="user-search">Поиск по сайту</label>
+                    <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
+                  </form>
                 </div>
               </li>
               <li class="user-list__item user-list__item--icon-basket">
@@ -52,11 +55,12 @@
           <ul class="catalog__list list-reset">
             <li class="catalog__item product">
               <div class="product__image product__image--hare">
+                <a class="product__image-link" href="#"></a>
                 <!-- <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображен вязаный заец"> -->
               </div>
               <div class="product__info">
                 <div class="product__name-box">
-                  <h2 class="product__title">Зайчик-попрыгайчик</h2>
+                  <a class="product__title" href="#">Зайчик-попрыгайчик</a>
                   <div class="product__characteristic">Рост 30 см, вес 200 г</div>
                 </div>
                 <div class="product__price-box">
@@ -69,11 +73,12 @@
             </li>
             <li class="catalog__item product">
               <div class="product__image product__image--bowl">
+                <a class="product__image-link" href="#"></a>
                 <!-- <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображена вязаная корзинка"> -->
               </div>
               <div class="product__info">
                 <div class="product__name-box">
-                  <h2 class="product__title">Корзинка для белья</h2>
+                  <a class="product__title" href="#">Корзинка для белья</a>
                   <div class="product__characteristic">Диаметр 15 см, высота 10 см</div>
                 </div>
                 <div class="product__price-box">
@@ -86,11 +91,12 @@
             </li>
             <li class="catalog__item product">
               <div class="product__image product__image--toys">
+                <a class="product__image-link" href="#"></a>
                 <!-- <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="На рисунке изображена большая вязаная корзинка"> -->
               </div>
               <div class="product__info">
                 <div class="product__name-box">
-                  <h2 class="product__title">Большая корзинка для игрушек</h2>
+                  <a class="product__title" href="#">Большая корзинка для игрушек</a>
                   <div class="product__characteristic">Диаметр 30 см, высота 30 см</div>
                 </div>
                 <div class="product__price-box">
@@ -123,7 +129,9 @@
       <footer class="footer">
         <div class="footer__wrapper-container">
           <div class="footer__logo">
-            <img src="img/logo-footer.svg" width="102" height="34" alt="">
+            <a href="index.html">
+              <img src="img/logo-footer.svg" width="102" height="34" alt="">
+            </a>
           </div>
           <ul class="social footer__list-container list-reset">
             <li class="social__item">

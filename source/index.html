@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width">
   </head>
   <body>
     <div class="wrapper">
@@ -26,8 +27,10 @@
             <ul class="nav__list user-list list-reset">
               <li class="user-list__item user-list__item--icon-search">
                 <div class="user-list__item-box nav__link">
-                  <label class="visually-hidden" for="user-search">Поиск по сайту</label>
-                  <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
+                  <form action="https://echo.htmlacademy.ru" method="get">
+                    <label class="visually-hidden" for="user-search">Поиск по сайту</label>
+                    <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
+                  </form>
                 </div>
               </li>
               <li class="user-list__item user-list__item--icon-basket">
@@ -52,14 +55,18 @@
           <div class="content-shop">
             <ul class="content-shop__list list-reset">
               <li class="content-shop__item content-shop__item--light">
-                <div class="content-shop__text-box content-shop__text-box--interior">
-                  Предметы<br> интерьера
-                </div>
+                <a class="content-shop__link" href="#">
+                  <div class="content-shop__text-box content-shop__text-box--interior">
+                    Предметы<br> интерьера
+                  </div>
+                </a>
               </li>
               <li class="content-shop__item content-shop__item--dark">
-                <div class="content-shop__text-box content-shop__text-box--game">
-                  Детские<br> игрушки
-                </div>
+                <a class="content-shop__link" href="#">
+                  <div class="content-shop__text-box content-shop__text-box--game">
+                    Детские<br> игрушки
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -176,21 +183,23 @@
       <footer class="footer">
         <div class="footer__wrapper-container">
           <div class="footer__logo">
-            <img src="img/logo-footer.svg" width="102" height="34" alt="">
+            <a href="#">
+              <img src="img/logo-footer.svg" width="102" height="34" alt="">
+            </a>
           </div>
           <ul class="social footer__list-container list-reset">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="" rel="noopener">
+              <a class="social__link social__link--instagram" href="#" rel="noopener">
                 <span class="visually-hidden">Мы в Инстаграме</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="" rel="noopener">
+              <a class="social__link social__link--facebook" href="#" rel="noopener">
                 <span class="visually-hidden">Мы в Фейсбуке</span>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--twiter" href="" rel="noopener">
+              <a class="social__link social__link--twiter" href="#" rel="noopener">
                 <span class="visually-hidden">Мы в Твитере</span>
               </a>
             </li>
