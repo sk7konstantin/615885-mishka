@@ -1,19 +1,24 @@
 .reviews {
-  margin-bottom: 30px;
+  padding-top: 22px;
+  padding-bottom: 45px;
 }
 
 .reviews__container {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 30px;
-  padding-bottom: 30px;
   .container;
+}
+
+.reviews__title {
+  margin-bottom: 22px;
 }
 
 .reviews__description {
   font-size: 15px;
   line-height: 30px;
   color: #444444;
+  margin: 0;
+  margin-bottom: 28px;
 }
 
 .reviews__autor-name {
@@ -25,14 +30,14 @@
 .reviews__toggles {
   display: flex;
   width: 260px;
-  margin-top: 30px;
-  margin-bottom: 35px;
+  margin-top: 35px;
+  margin-bottom: 39px;
 }
 
 .slider__toggle {
   position: relative;
   background-color: #ffffff;
-  border: 1px solid #ececec;
+  border: 1px solid @gray-color;
   width: 50%;
   height: 50px;
   cursor: pointer;
@@ -54,24 +59,33 @@
       background-image: url("../img/icon-right-arrow.svg");
     }
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .reviews__write {
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .reviews {
     background-image: url("../img/review@1x.jpg");
     background-size: 350px 457px;
     background-repeat: no-repeat;
-    margin-bottom: 50px;
+    padding-top: 76px;
+    padding-bottom: 90px;
   }
 
   .reviews__container {
     justify-content: space-between;
     align-items: center;
-    padding-top: 80px;
     .container-tablet;
   }
 
@@ -91,6 +105,7 @@
   .reviews__title {
     font-size: 43px;
     line-height: 50px;
+    margin: 0;
   }
 
   .reviews__write {
@@ -101,7 +116,8 @@
   .reviews__description {
     font-size: 17px;
     order: 2;
-    margin-top: 45px;
+    margin-top: 46px;
+    margin-bottom: 24px;
   }
 
   .reviews__autor-block {
@@ -113,11 +129,12 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desctop-width) {
   .reviews {
     padding-left: 175px;
     .container-tablet;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
+    padding-bottom: 65px;
   }
 
   .reviews__container {
@@ -131,5 +148,6 @@
 
   .reviews__description {
     padding-right: 100px;
+    margin-bottom: 7px;
   }
 }

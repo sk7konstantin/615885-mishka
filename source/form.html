@@ -10,31 +10,43 @@
   <div class="wrapper">
     <!--Шапка страницы-->
     <header class="header header-container">
-        <nav class="nav">
-          <a class="header__logo nav__link" href="index.html">
-            <!-- <img class="header__logo-image" src="img/logo-mobile.svg" width="90" height="35" alt="Логотип Мишка" > -->
-          </a>
-          <button class="nav__toggle" type="button">Открыть меню</button>
+        <nav class="nav nav--closed nav--nojs">
+          <button class="nav__toggle nav--icon-closed nav--icon-opened" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+            <div class="header__logo-box">
+              <a class="header__logo" href="index.html">
+                <!-- <img class="header__logo-image" src="img/logo-mobile.svg" width="90" height="35" alt="Логотип Мишка" > -->
+              </a>
+            </div>
           <!-- <div class="nav__wrapper"> -->
             <ul class="nav__list site-list list-reset">
               <li class="site-list__item">
-                <a class="nav__link link-block" href="catalog.html">Каталог товаров</a>
+                <a class="nav__link link-block nav__link-site" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="site-list__item">
-                <a class="nav__link link-block" href="">Вязание на заказ</a>
+                <a class="nav__link link-block nav__link-site" href="">Вязание на заказ</a>
               </li>
             </ul>
             <ul class="nav__list user-list list-reset">
-              <li class="user-list__item user-list__item--icon-search">
+              <li class="user-list__item user-list__item-search">
                 <div class="user-list__item-box nav__link">
                   <form action="https://echo.htmlacademy.ru" method="get">
+                    <svg class="user-list__search--icon" width="18" height="18" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+                      <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+                    </svg>
                     <label class="visually-hidden" for="user-search">Поиск по сайту</label>
                     <input class="user-list__search" id="user-search" type="search" placeholder="Поиск по сайту">
                   </form>
                 </div>
               </li>
-              <li class="user-list__item user-list__item--icon-basket">
-                <a class="nav__link link-block user-list__basket" href="#">Корзина: пока пуста</a>
+              <li class="user-list__item user-list__item-basket">
+                <a class="nav__link link-block user-list__basket" href="#">
+                  <svg class="user-list__basket--icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+                    <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+                  </svg>
+                  Корзина: пока пуста
+                </a>
               </li>
             </ul>
           <!-- </div> -->
@@ -57,7 +69,7 @@
         </p>
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
               <!--Блок с типом заказа-->
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--type">
             <div class="form__fieldset-wrapper">
               <div class="form__legend">Тип</div>
               <div class="form__input-box form__input-box--type">
@@ -71,57 +83,57 @@
             </div>
           </fieldset>
             <!--Блок с выбором цвета-->
-          <fieldset class="form__fieldset form__fieldset-color">
-            <div class="form__fieldset-wrapper">
+          <fieldset class="form__fieldset form__fieldset--color">
+            <div class="form__fieldset-wrapper form__fieldset-wrapper--color">
               <legend class="form__legend">Цвет</legend>
-              <div class="form__input-box form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-color--width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-white" id="type-white" checked>
                 <label class="form__box-color form__box-title" for="type-white">Белый</label>
               </div>
-              <div class="form__input-box form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-color--width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-gray" id="type-gray" checked>
                 <label class="form__box-color form__box-title" for="type-gray">Серый</label>
               </div>
-              <div class="form__input-box form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-color--width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-tifany" id="type-tifany">
                 <label class="form__box-color form__box-title" for="type-tifany">"Тиффани"</label>
               </div>
-              <div class="form__input-box form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-color--width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-black" id="type-black">
                 <label class="form__box-color form__box-title" for="type-black">Черный</label>
               </div>
-              <div class="form__input-box form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-color--width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-pink" id="type-pink">
                 <label class="form__box-color form__box-title" for="type-pink">Розовый</label>
               </div>
-              <div class="form__input-box form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-color--width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-orange" id="type-orange">
                 <label class="form__box-color form__box-title" for="type-orange">Оранжевый</label>
               </div>
             </div>
           </fieldset>
             <!--Блок с данными пользователя-->
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--user">
             <div class="form__fieldset-wrapper">
-              <legend class="form__legend">ФИО</legend>
+              <legend class="form__legend form__legend--user">ФИО</legend>
               <div class="form__input-box form__input-box--user">
-                <label class="form__box-title form__input-box-title" for="name">Имя:</label>
+                <label class="form__box-title form__input-box--title" for="name">Имя:</label>
                 <input class="form__input-element" type="text" id="name" name="name" placeholder="Введите ваше имя*">
               </div>
               <div class="form__input-box form__input-box--user">
-                <label class="form__box-title form__input-box-title" for="surname">Фамилия:</label>
+                <label class="form__box-title form__input-box--title" for="surname">Фамилия:</label>
                 <input class="form__input-element" type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
               </div>
               <div class="form__input-box form__input-box--user">
-                <label class="form__box-title form__input-box-title" for="patronymic">Отчество:</label>
+                <label class="form__box-title form__input-box--title" for="patronymic">Отчество:</label>
                 <input class="form__input-element" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
               </div>
             </div>
           </fieldset>
             <!--Блок с номером телефона-->
-          <fieldset class="form__fieldset form__fieldset-tel">
+          <fieldset class="form__fieldset form__fieldset--tel">
             <div class="form__fieldset-wrapper">
-              <legend class="form__legend">Тел</legend>
+              <legend class="form__legend form__legend--tel">Тел</legend>
               <div class="form__input-box form__phone-item--icon">
                   <label class="visually-hidden" for="number-phone">Номер телефона:</label>
                   <input class="form__input-element" type="tel" id="number-phone" name="phone" placeholder="+7 XXX XXX XX XX*">
@@ -129,9 +141,9 @@
             </div>
           </fieldset>
             <!--Блок с email-->
-          <fieldset class="form__fieldset form__fieldset-email">
+          <fieldset class="form__fieldset form__fieldset--email">
             <div class="form__fieldset-wrapper">
-              <legend class="form__legend">e-mail</legend>
+              <legend class="form__legend form__legend--email">e-mail</legend>
               <div class="form__input-box form__email-item--icon">
                   <label class="visually-hidden" for="mail">Email:</label>
                   <input class="form__input-element" type="email" id="mail" name="email" placeholder="Ваш Email*">
@@ -139,11 +151,11 @@
             </div>
           </fieldset>
             <!--Блок с комменатарием к заказу-->
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--comment">
             <div class="form__fieldset-wrapper">
-              <legend class="form__legend">Доп</legend>
+              <legend class="form__legend form__legend--comment">Доп</legend>
               <label class="visually-hidden" for="comment">Коментарий к заказу:</label>
-              <textarea class="form__input-textarea" name="comments" id="comment" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea class="form__input-textarea" name="comments" id="comment" rows="8" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </fieldset>
           <div class="form__button-box">
@@ -188,5 +200,21 @@
         </div>
       </footer>
   </div>
+  <script>
+    var nav = document.querySelector('.nav');
+    var navToggle = document.querySelector('.nav__toggle');
+
+    nav.classList.remove('nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (nav.classList.contains('nav--closed')) {
+        nav.classList.remove('nav--closed');
+        nav.classList.add('nav--opened');
+      } else {
+        nav.classList.add('nav--closed');
+        nav.classList.remove('nav--opened');
+      }
+    });
+  </script>
 </body>
 </html>
