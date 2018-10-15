@@ -11,6 +11,7 @@
   font-size: 18px;
   line-height: 30px;
   margin: 0;
+  margin-bottom: 25px;
 }
 
 .contacts__table {
@@ -19,6 +20,7 @@
   font-size: 15px;
   line-height: 30px;
   width: 100%;
+  margin-bottom: 7px;
 }
 
 .contacts__row {
@@ -35,9 +37,24 @@
   }
 }
 
+.contacts__cell-address {
+  font-style: normal;
+}
+
 .contacts__link {
   text-decoration: none;
-  color: #000000;
+  color: @black-color;
+}
+
+.link-hover {
+  &:hover,
+  &:focus {
+    color: @lightgreen-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__button-box {
@@ -45,10 +62,10 @@
 }
 
 .contacts__button {
-  margin: 30px 0;
+  margin: 38px 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .contacts {
     padding-top: 65px;
     margin-bottom: 50px;
@@ -59,9 +76,21 @@
   }
 
   .contacts__title {
+    position: relative;
     font-size: 43px;
     line-height: 50px;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 3px;
+      width: 47px;
+      height: 81px;
+      background-image: url("../../img/icon-flag.svg");
+      background-repeat: no-repeat;
+    }
   }
 
   .contacts__button {
@@ -72,18 +101,28 @@
   .contacts__table {
     display: flex;
     font-size: 17px;
+    margin: 0;
+    margin-bottom: 28px;
   }
 
   .contacts__row {
     margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .contacts__button-box {
     .container-tablet;
   }
+
+  .contacts__br {
+    display: none;
+  }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desctop-width) {
   .contacts {
     display: flex;
     flex-direction: column;
@@ -92,14 +131,14 @@
     padding-top: 80px;
     padding-left: 175px;
     .container-tablet;
-    margin-bottom: 70px;
-    height: 535px;
+    margin-bottom: 108px;
+    height: 542px;
   }
 
   .contacts__container {
     width: 350px;
     margin: 0;
-    padding-top: 0;
+    padding-top: 72px;
   }
 
   .map {
@@ -111,12 +150,17 @@
   }
 
   .contacts__cell {
-    padding-bottom: 20px;
+    padding-bottom: 28px;
   }
 
   .contacts__title {
     font-size: 53px;
     line-height: 57px;
+
+    &::before {
+      top: -6px;
+      left: -110px;
+    }
   }
 
   .contacts__button-box {

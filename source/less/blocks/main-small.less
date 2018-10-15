@@ -1,0 +1,18 @@
+.main {
+  position: relative;
+}
+
+.main-small {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-small {
+    position: absolute;
+    display: block;
+    font-size: 15px;
+    top: 15px;
+    right: 50px;
+    z-index: 1;
+  }
+}

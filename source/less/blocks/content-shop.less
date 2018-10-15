@@ -1,7 +1,3 @@
-.content-shop {
-  margin-top: -45px;
-}
-
 .content-shop__item--light {
   background-color: #63d1bb;
 }
@@ -11,31 +7,49 @@
 }
 
 .content-shop__text-box {
+  position: relative;
   font-size: 19px;
   font-weight: bold;
   color: #ffffff;
-  background-image: url("../img/icon-interior.svg");
-  background-size: 40px 62px;
-  background-position: 100% 50%;
-  background-repeat: no-repeat;
+  padding: 27px 0;
   .container;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 40px;
+    height: 70px;
+    background-image: url("../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  &--interior {
+    &::before {
+      right: 7px;
+    }
+  }
+
   &--game {
-    background-image: url("../img/icon-toy.svg");
-    background-size: 60px 60px;
+    &::before {
+      right: -2px;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/icon-toy.svg");
+    }
   }
 }
 
 .content-shop__link {
   display: block;
-  padding: 25px 0;
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .content-shop {
     .container-tablet;
-    margin-top: -120px;
   }
 
   .content-shop__list {
@@ -44,17 +58,33 @@
 
   .content-shop__item {
     width: 50%;
+    padding-bottom: 13px;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &:active {
+      .content-shop__text-box {
+        opacity: 0.3;
+      }
+    }
   }
 
   .content-shop__text-box {
+    line-height: 30px;
     margin: 0;
-    padding: 0;
-  }
+    padding: 25px 35px;
 
-  .content-shop__link {
-    padding: 35px;
+    &::before {
+      top: 28px;
+      right: 35px;
+    }
   }
 }
 
-// @media (min-width: 1150px) {
-// }
+@media (min-width: @desctop-width) {
+  .content-shop__text-box {
+    background-position: 97% center;
+  }
+}
