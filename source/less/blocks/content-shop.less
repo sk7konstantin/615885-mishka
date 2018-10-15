@@ -7,27 +7,43 @@
 }
 
 .content-shop__text-box {
+  position: relative;
   font-size: 19px;
   font-weight: bold;
   color: #ffffff;
-  min-height: 70px;
-  background-image: url("../img/icon-interior.svg");
-  background-size: 40px 70px;
-  background-position: 96% center;
-  background-repeat: no-repeat;
   padding: 27px 0;
   .container;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 40px;
+    height: 70px;
+    background-image: url("../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  &--interior {
+    &::before {
+      right: 7px;
+    }
+  }
+
   &--game {
-    background-image: url("../img/icon-toy.svg");
-    background-size: 60px 60px;
-    background-position: 97% center;
+    &::before {
+      right: -2px;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/icon-toy.svg");
+    }
   }
 }
 
 .content-shop__link {
   display: block;
-  padding-bottom: 8px;
   text-decoration: none;
 }
 
@@ -42,12 +58,28 @@
 
   .content-shop__item {
     width: 50%;
+    padding-bottom: 13px;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &:active {
+      .content-shop__text-box {
+        opacity: 0.3;
+      }
+    }
   }
 
   .content-shop__text-box {
     line-height: 30px;
     margin: 0;
     padding: 25px 35px;
+
+    &::before {
+      top: 28px;
+      right: 35px;
+    }
   }
 }
 

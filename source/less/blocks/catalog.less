@@ -1,3 +1,7 @@
+.catalog {
+  position: relative;
+}
+
 .catalogs {
   .container;
   margin-top: 30px;
@@ -6,7 +10,7 @@
 
 .product {
   border: 1px solid @gray-color;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   &:last-child {
     margin-bottom: 0;
@@ -53,7 +57,8 @@
   font-size: 15px;
   line-height: 30px;
   font-weight: bold;
-  padding: 25px 0;
+  padding: 22px 0 28px 0;
+  border-top: 1px solid @gray-color;
 }
 
 .product__button {
@@ -63,17 +68,17 @@
   border: none;
   background-color: #ffffff;
   cursor: pointer;
+  outline: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 21px;
-    height: 18px;
-    background-image: url("../img/icon-cart.svg");
-    background-size: 21px 18px;
-    background-repeat: no-repeat;
+  &:hover,
+  &:focus {
+    path {
+      fill: @lightgreen-color;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -94,6 +99,16 @@
     padding-right: 30px;
     margin-bottom: 4px;
     margin-top: 25px;
+
+    &:hover,
+    &:focus {
+      color: rgba(0, 0, 0, 0.6);
+      outline: none;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
   }
 
   .product__image {
@@ -108,7 +123,7 @@
   }
 
   .product__info {
-    width: 334px;
+    // width: 334px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -125,7 +140,7 @@
 @media (min-width: @desctop-width) {
   .catalogs {
     margin-top: 132px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   .catalog__list {
@@ -139,10 +154,24 @@
     display: block;
     width: 316px;
     margin-bottom: 0;
+
+    &:hover,
+    &:focus {
+      .product__info {
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &:active {
+      .product__info {
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+      }
+    }
   }
 
   .product__title {
     padding-right: 20px;
+    min-height: 48px;
   }
 
   .product__image {
@@ -152,6 +181,12 @@
   }
 
   .product__info {
-    width: 253px;
+    width: 100%;
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  .product__characteristic {
+    margin-bottom: 15px;
   }
 }

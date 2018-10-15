@@ -1,6 +1,18 @@
 .reviews {
+  position: relative;
   padding-top: 22px;
   padding-bottom: 45px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .reviews__container {
@@ -81,6 +93,11 @@
     background-repeat: no-repeat;
     padding-top: 76px;
     padding-bottom: 90px;
+
+    &::after {
+      bottom: 0;
+      height: 17px;
+    }
   }
 
   .reviews__container {
@@ -135,6 +152,12 @@
     .container-tablet;
     margin-bottom: 75px;
     padding-bottom: 65px;
+
+    &::after {
+      bottom: -85px;
+      left: 0;
+      height: 24px;
+    }
   }
 
   .reviews__container {
