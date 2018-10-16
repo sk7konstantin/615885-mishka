@@ -3,11 +3,16 @@
   margin-bottom: 30px;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 575px 373px;
   background-position: center -20px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: cover;
+  }
 }
 
 .description-shop__header {
-  // background-size: cover;
   min-height: 282px;
   padding-top: 70px;
 }
@@ -29,6 +34,7 @@
     margin-bottom: 25px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center 0;
+    background-size: 1150px 746px;
     min-height: 765px;
     margin-top: -90px;
 
@@ -41,6 +47,11 @@
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: no-repeat;
       background-size: cover;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+      // background-size: 2300px auto;
     }
   }
 
@@ -67,15 +78,17 @@
   .description-shop {
     margin-bottom: 43px;
     margin-top: -41px;
+    background-image: url("../img/hero-desktop@1x.jpg");
 
     &::after {
       bottom: 0;
       height: 34px;
     }
-  }
 
-  .description-shop__header {
-    background-image: url("../img/hero-desktop@1x.jpg");
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/hero-desktop@2x.jpg");
+      // background-size: 2300px 1492px;
+    }
   }
 
   .description-shop__title {
