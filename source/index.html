@@ -16,10 +16,13 @@
           </button>
           <div class="header__logo-box">
             <a class="header__logo" href="#">
-              <!-- <img class="header__logo-image" src="img/logo-mobile.svg" width="90" height="35" alt="Логотип Мишка" > -->
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" alt="Логотип Мишка">
+              </picture>
             </a>
           </div>
-          <!-- <div class="nav__wrapper"> -->
             <ul class="nav__list site-list list-reset">
               <li class="site-list__item">
                 <a class="nav__link link-block nav__link-site" href="catalog.html">Каталог товаров</a>
@@ -55,7 +58,6 @@
                 <a href="" class="new-list__link nav__link">Распродажа</a>
               </li>
             </ul>
-          <!-- </div> -->
         </nav>
       </header>
       <!--Основное содержание страницы-->
@@ -117,7 +119,13 @@
                     </tr>
                   </table>
                 </div>
-                <div class="product-week__image"></div>
+                <div class="product-week__image">
+                  <picture>
+                    <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                    <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="На фото изображены вязаные корзинки">
+                  </picture>
+                </div>
                 <span class="product-week__price">Цена: 990 руб.</span>
                 <div class="product-week__button-box">
                   <button class="product-week__button button" type="button">Заказать</button>
@@ -181,7 +189,9 @@
             <div class="contacts__table">
               <div class="contacts__row">
                 <div class="contacts__cell contacts__cell--right">e-mail:</div>
-                <div class="contacts__cell"><a class="contacts__link link-hover" target="_blank" rel="noopener" href="mailto: info@mimimishkashop.ru">info@mimimishkashop.ru</a></div>
+                <div class="contacts__cell">
+                  <a class="contacts__link link-hover" target="_blank" rel="noopener" href="mailto: info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+                </div>
               </div>
               <div class="contacts__row">
                 <div class="contacts__cell contacts__cell--right">адрес:</div>
@@ -192,6 +202,11 @@
         <!--Блок с картой-->
           <div class="map">
             <h2 class="visually-hidden">Карта с местоположением магазина</h2>
+            <picture>
+              <source media="min-width: 1150px" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
+            </picture>
           </div>
           <div class="contacts__button-box"> <!--Блок центровщик-->
             <a class="contacts__button button link-block" href="#">Напишите нам</a>
@@ -245,6 +260,7 @@
         </div>
       </footer>
     </div>
+    <script src="js/polyfill.js"></script>
     <script>
       var nav = document.querySelector('.nav');
       var navToggle = document.querySelector('.nav__toggle');
