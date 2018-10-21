@@ -18,6 +18,12 @@
   padding-bottom: 35px;
 }
 
+/*Временно*/
+.product-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .product-week__title {
   margin-bottom: 5px;
 }
@@ -61,6 +67,7 @@
   margin-bottom: 25px;
   width: 260px;
   height: 315px;
+  background-color: #f1f1f1;
 }
 
 .product-week__price {
@@ -72,7 +79,6 @@
   margin-bottom: 25px;
 }
 
-
 @media (min-width: @tablet-width) {
   .product-week {
     &::after {
@@ -81,6 +87,7 @@
   }
 
   .product-week__wrapper {
+    position: relative;
     .container-tablet;
     padding-bottom: 55px;
   }
@@ -109,7 +116,7 @@
     flex-direction: column;
     align-items: space-between;
     flex-wrap: wrap;
-    height: 420px;
+    min-height: 420px;
   }
 
   .product-week__description {
@@ -149,6 +156,8 @@
 
   .product-week__image {
     order: 1;
+    position: absolute;
+    right: 0;
     width: 333px;
     height: 404px;
     margin: 0;
@@ -175,7 +184,7 @@
   }
 
   .product-container {
-    height: 480px;
+    min-height: 480px;
   }
 
   .product-week__image {

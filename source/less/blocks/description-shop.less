@@ -32,16 +32,17 @@
 @media (min-width: @tablet-width) {
   .description-shop {
     margin-bottom: 25px;
+    background-color: #f9f9f9;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center 0;
     background-size: 1150px 746px;
-    min-height: 765px;
+    // min-height: 765px;
     margin-top: -90px;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: 13px;
+      bottom: -13px;
       width: 100%;
       height: 24px;
       background-image: url("../img/bg-zigzag-fill.svg");
@@ -51,7 +52,6 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
-      // background-size: 2300px auto;
     }
   }
 
@@ -81,13 +81,12 @@
     background-image: url("../img/hero-desktop@1x.jpg");
 
     &::after {
-      bottom: 0;
+      bottom: -13px;
       height: 34px;
     }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
-      // background-size: 2300px 1492px;
     }
   }
 

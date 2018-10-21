@@ -91,27 +91,53 @@
 
   .advantages__list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    height: 430px;
+    // height: 430px;
   }
 
   .advantages__item {
+    // display: flex;
+    // flex-direction: column;
     font-size: 20px;
     line-height: 22px;
     width: 334px;
     margin-bottom: 60px;
     padding-right: 40px;
 
-    &:nth-of-type(3n) {
-      margin-bottom: 0;
+    // &:nth-of-type(3n) {
+    //   margin-bottom: 0;
+    // }
+
+    &--flower {
+      order: -5;
+    }
+
+    &--ball {
+      order: -4;
+    }
+
+    &--money {
+      order: -3;
+    }
+
+    &--rocket {
+      order: -2;
+    }
+
+    &--heart {
+      order: -1;
+    }
+
+    &--gift {
+      order: 0;
     }
   }
 }
 
 @media (min-width: @desctop-width) {
   .advantages {
-    padding: 68px 175px;
+    padding: 68px 175px 23px 175px;
     margin-bottom: 0;
   }
 
