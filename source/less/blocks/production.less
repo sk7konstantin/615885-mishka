@@ -36,6 +36,7 @@
   display: flex;
   width: 260px;
   height: 150px;
+  background-color: #f1f1f1;
   background-image: url("../img/video-mobile@1x.jpg");
   background-size: cover;
 
@@ -129,18 +130,23 @@
 
 @media (min-width: @desctop-width) {
   .production {
+    position: relative;
     flex-wrap: wrap;
-    height: 452px;
+    flex-direction: row;
+    // height: 452px;
     margin-bottom: 107px;
   }
 
   .production__info {
     width: 350px;
     margin: 0;
-    padding: 0 50px 0 74px;
+    padding: 176px 42px 0 77px;
+    // margin-top: auto;
   }
 
   .production__title-box {
+    position: absolute;
+    right: 110px;
     margin: 0;
     margin-top: 94px;
     margin-bottom: 34px;

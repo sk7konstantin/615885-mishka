@@ -78,6 +78,13 @@
   position: relative;
 }
 
+.user-list__button {
+  position: absolute;
+  left: 0;
+  border: none;
+  background-color: #ffffff;
+}
+
 .user-list__search-input {
   font-size: 17px;
   font-weight: bold;
@@ -94,7 +101,10 @@
 }
 
 .user-list__icon {
-  position: absolute;
+  &--basket {
+    position: absolute;
+  }
+
   left: 0;
   top: 30px;
 }
@@ -208,6 +218,7 @@
     // }
   }
 
+  .user-list__button,
   .user-list__icon {
     position: static;
   }
