@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprites.svg"></include>
+  </div>
   <div class="wrapper">
     <!--Шапка страницы-->
     <header class="header header-container">
@@ -36,7 +39,7 @@
               <form class="user-list__item-form nav__link" action="https://echo.htmlacademy.ru" method="get">
                 <button class="user-list__button" type="button">
                   <svg class=" user-list__icon user-list__icon--search" width="18" height="18">
-                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                    <use xlink:href="#icon-search"></use>
                   </svg>
                 </button>
                 <label class="visually-hidden" for="user-search">Поиск по сайту</label>
@@ -45,7 +48,9 @@
             </li>
             <li class="user-list__item user-list__item-basket">
               <a class="user-list__basket nav__link link-block" href="#">
-                <svg class="user-list__icon user-list__icon--basket" width="20" height="19"><use xlink:href="img/sprite.svg#icon-basket"></use></svg>
+                <svg class="user-list__icon user-list__icon--basket" width="20" height="19">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
                 Корзина: пока пуста
               </a>
             </li>
@@ -80,7 +85,7 @@
             <div class="form__fieldset-wrapper">
               <div class="form__legend">Тип</div>
               <div class="form__input-box form__input-box--type">
-                <input class="visually-hidden form__input-type" type="radio" name="type-accessory" id="accessory" checked>
+                <input class="visually-hidden form__input-type" type="radio" name="type-accessory" id="accessory" checked="">
                 <label class="form__box-type form__box-title form__box-type--radio" for="accessory">Аксессуар для интерьера</label>
               </div>
               <div class="form__input-box">
@@ -94,11 +99,11 @@
             <div class="form__fieldset-wrapper form__fieldset-wrapper--color">
               <div class="form__legend">Цвет</div>
               <div class="form__input-box form__input-box--color form__input-color--width">
-                <input class="visually-hidden form__input-color" type="checkbox" name="color-white" id="type-white" checked>
+                <input class="visually-hidden form__input-color" type="checkbox" name="color-white" id="type-white" checked="">
                 <label class="form__box-color form__box-title" for="type-white">Белый</label>
               </div>
               <div class="form__input-box form__input-box--color form__input-color--width">
-                <input class="visually-hidden form__input-color" type="checkbox" name="color-gray" id="type-gray" checked>
+                <input class="visually-hidden form__input-color" type="checkbox" name="color-gray" id="type-gray" checked="">
                 <label class="form__box-color form__box-title" for="type-gray">Серый</label>
               </div>
               <div class="form__input-box form__input-box--color form__input-color--width">
@@ -144,7 +149,7 @@
               <div class="form__input-box form__input-box--icon">
                   <label class="visually-hidden" for="number-phone">Номер телефона:</label>
                   <svg class="form__input-box--icon-phone" width="25" height="24">
-                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                    <use xlink:href="#icon-phone"></use>
                   </svg>
                   <input class="form__input-element form__input-element--phone" type="tel" id="number-phone" name="phone" placeholder="+7 XXX XXX XX XX*">
               </div>
@@ -157,7 +162,7 @@
               <div class="form__input-box form__input-box--icon">
                 <label class="visually-hidden" for="mail">Email:</label>
                 <svg class="form__input-box--icon-email" width="32" height="32">
-                  <use xlink:href="img/sprite.svg#icon-email"></use>
+                  <use xlink:href="#icon-mail"></use>
                 </svg>
                 <input class="form__input-element" type="email" id="mail" name="email" placeholder="Ваш Email*">
               </div>
@@ -185,7 +190,7 @@
         <div class="footer__logo">
           <a class="footer__logo-link" href="index.html">
             <svg width="101" height="34">
-              <use xlink:href="img/sprite.svg#icon-footer-logo"></use>
+              <use xlink:href="#icon-footer-logo"></use>
             </svg>
           </a>
         </div>
@@ -194,7 +199,7 @@
             <a class="social__link social__link--instagram" href="#" rel="noopener">
               <span class="visually-hidden">Мы в Инстаграме</span>
               <svg width="22" height="21">
-                <use xlink:href="img/sprite.svg#icon-social-instagram"></use>
+                <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
@@ -202,7 +207,7 @@
             <a class="social__link social__link--facebook" href="#" rel="noopener">
               <span class="visually-hidden">Мы в Фейсбуке</span>
               <svg width="15" height="28">
-                <use xlink:href="img/sprite.svg#icon-social-fb"></use>
+                <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
@@ -210,16 +215,16 @@
             <a class="social__link social__link--twiter" href="#" rel="noopener">
               <span class="visually-hidden">Мы в Твитере</span>
               <svg width="24" height="20">
-                <use xlink:href="img/sprite.svg#icon-social-tw"></use>
+                <use xlink:href="#icon-twitter"></use>
               </svg>
             </a>
           </li>
         </ul>
         <div class="footer__copyright copyright">
           <span class="copyright__text">Разработано</span>
-          <a class="copyright__link" target="_blank" rel="noopener" href="#" >
+          <a class="copyright__link" target="_blank" rel="noopener" href="#">
             <svg width="27" height="34">
-              <use xlink:href="img/sprite.svg#icon-copyright"></use>
+              <use xlink:href="#icon-logo-htmlacademy"></use>
             </svg>
           </a>
         </div>
