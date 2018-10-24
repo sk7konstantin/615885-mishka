@@ -86,6 +86,12 @@ gulp.task("sprite", function() {
     .pipe(svgstore({
       inlineSvg: true
     }))
+    .pipe(cheerio({
+      run: function ($) {
+          $('[fill]').removeAttr('fill');
+      },
+      parserOptions: { xmlMode: true }
+    }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
 });
