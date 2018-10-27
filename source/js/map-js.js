@@ -1,5 +1,5 @@
 var myMap;
-var imaps;
+var ymaps;
 
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
