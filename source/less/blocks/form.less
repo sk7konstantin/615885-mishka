@@ -119,8 +119,6 @@
 }
 
 .form__box-color {
-  // display: flex;
-  // align-items: center;
   padding-left: 65px;
 
   &::before {
@@ -198,6 +196,11 @@
   }
 }
 
+.form__input-element:focus + .form__input-box--icon-phone,
+.form__input-element:focus + .form__input-box--icon-email {
+  fill: @lightgreen-color;
+}
+
 .form__input-element {
   position: relative;
   width: 100%;
@@ -224,7 +227,7 @@
   min-height: 140px;
   border: 2px solid @black-color;
   padding: 15px;
-  resize: horizontal;
+  resize: none;
   overflow: auto;
 
   &::placeholder {
