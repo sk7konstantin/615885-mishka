@@ -297,6 +297,26 @@
     <script>svg4everybody();</script>
     <script src="js/index.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<cc6d78e8-634c-4e9f-b5e1-0ce63f0b2bf0>" type="text/javascript" defer></script>
-    <script src="js/map-js.min.js" defer></script>
+    <script type="text/javascript">
+      var myMap;
+      var ymaps;
+
+      // Дождёмся загрузки API и готовности DOM.
+      ymaps.ready(init);
+
+      function init () {
+          // Создание экземпляра карты и его привязка к контейнеру с
+          // заданным id ("map").
+          myMap = new ymaps.Map('map', {
+              // При инициализации карты обязательно нужно указать
+              // её центр и коэффициент масштабирования.
+              center: [59.938631, 30.323055],
+              zoom: 16
+          }, {
+              searchControlProvider: 'yandex#search'
+          });
+      }
+    </script>
+    <!-- <script src="js/map-js.min.js" defer></script> -->
   </body>
 </html>
