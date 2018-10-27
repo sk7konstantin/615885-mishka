@@ -1,5 +1,4 @@
 var myMap;
-var myPlacemark;
 
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
