@@ -4,16 +4,18 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensans.woff2">
+    <link rel="preload" href="fonts/opensansbold.woff2">
     <meta name="viewport" content="width=device-width">
   </head>
   <body>
-    <div style="display: none;">
+    <div class="svg-include">
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="wrapper">
       <!--Шапка страницы-->
       <header class="header header-container">
-        <nav class="nav nav--closed nav--nojs">
+        <nav class="nav nav--opened nav--nojs">
           <button class="nav__toggle nav--icon-closed nav--icon-opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -76,7 +78,7 @@
         <section class="description-shop">
           <header class="description-shop__header">
             <div class="description-shop__container"> <!--Блок центровщик -->
-              <h2 class="description-shop__title">Милые штуки <br>ручной<br> работы для дома</h2>
+              <h2 class="description-shop__title">Милые штуки ручной<br>работы для дома</h2>
             </div>
           </header>
           <div class="content-shop">
@@ -112,7 +114,7 @@
                   <table class="product-week__table">
                     <tr class="product-week__row">
                       <td class="product-week__cell product-week__cell--right">Цвет:</td>
-                      <td class="product-week__cell">"Тиффани"/серый</td>
+                      <td class="product-week__cell">&#171Тиффани&#187/серый</td>
                     </tr>
                     <tr class="product-week__row">
                       <td class="product-week__cell product-week__cell--right">Диаметр:</td>
@@ -137,7 +139,7 @@
                 </div>
                 <span class="product-week__price">Цена: 990 руб.</span>
                 <div class="product-week__button-box">
-                  <button class="product-week__button button" type="button">Заказать</button>
+                  <a class="product-week__button button product__button--js" href="#">Заказать</a>
                 </div>
               </div>
             </div>
@@ -216,9 +218,9 @@
             </div>
           </div>
           <!--Блок с картой-->
-          <div class="map">
+          <div class="map" id="map">
             <h2 class="visually-hidden">Карта с местоположением магазина</h2>
-            <picture>
+            <picture class="map__image">
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
@@ -294,5 +296,7 @@
     <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
     <script src="js/index.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/map-js.min.js"></script>
   </body>
 </html>

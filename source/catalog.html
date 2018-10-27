@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/opensans.woff2">
+    <link rel="preload" href="fonts/opensansbold.woff2">
     <meta name="viewport" content="width=device-width">
   </head>
   <body>
-    <div style="display: none;">
+    <div class="svg-include">
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="wrapper">
       <!--Шапка страницы-->
       <header class="header header-container">
-        <nav class="nav nav--closed nav--nojs">
+        <nav class="nav nav--opened nav--nojs">
           <button class="nav__toggle nav--icon-closed nav--icon-opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -97,7 +99,7 @@
                 </div>
                 <div class="product__price-box">
                   <span class="product__price">1 200 руб.</span>
-                  <button class="product__button" type="button">
+                  <button class="product__button product__button--js" type="button">
                     <svg width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
@@ -126,7 +128,7 @@
                 </div>
                 <div class="product__price-box">
                   <span class="product__price">690 руб.</span>
-                  <button class="product__button" type="button">
+                  <button class="product__button  product__button--js" type="button">
                     <svg width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
@@ -155,7 +157,7 @@
                 </div>
                 <div class="product__price-box">
                   <span class="product__price">1 500 руб.</span>
-                  <button class="product__button" type="button">
+                  <button class="product__button  product__button--js" type="button">
                     <svg width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>

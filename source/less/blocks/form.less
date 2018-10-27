@@ -21,6 +21,7 @@
 }
 
 .form__fieldset {
+  position: relative;
   border: none;
   margin: 0;
   padding: 0;
@@ -51,6 +52,7 @@
   align-items: center;
   color: #63d1bb;
   text-transform: uppercase;
+  .container;
   margin-bottom: 33px;
 
   &--tel,
@@ -117,13 +119,14 @@
 }
 
 .form__box-color {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   padding-left: 65px;
 
   &::before {
     content: "";
     position: absolute;
+    top: -11px;
     left: 0;
     width: 37px;
     height: 36px;
@@ -317,15 +320,32 @@
 
   .form__legend {
     position: absolute;
-    top: 0;
+    top: 45px;
     left: 0;
+    .container-tablet;
 
-    &::after {
-      display: none;
+    &--color {
+      top: 65px;
+    }
+
+    &--user {
+      top: 62px;
+    }
+
+    &--tel {
+      top: 62px;
+    }
+
+    &--email {
+      top: 42px;
     }
 
     &--comment {
-      top: 15px;
+      top: 65px;
+    }
+
+    &::after {
+      display: none;
     }
   }
 
@@ -354,6 +374,7 @@
     // margin-bottom: 58px;
 
     &::before {
+      top: -15px;
       left: 0;
       width: 51px;
       height: 51px;
@@ -491,6 +512,15 @@
       &::after {
         right: 2%;
       }
+    }
+  }
+
+  .form__box-color {
+    padding-left: 81px;
+    // margin-bottom: 58px;
+
+    &::before {
+      top: -20px;
     }
   }
 

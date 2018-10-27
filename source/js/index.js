@@ -1,12 +1,12 @@
 var nav = document.querySelector('.nav');
 var navToggle = document.querySelector('.nav__toggle');
-var button = document.querySelector(".product__button");
+var buttons = document.querySelectorAll(".product__button--js");
 var popup = document.querySelector(".modal-size");
+var button;
 
 nav.classList.remove('nav--nojs');
 
 navToggle.addEventListener('click', function() {
-  console.log("hello");
   if (nav.classList.contains('nav--closed')) {
     nav.classList.remove('nav--closed');
     nav.classList.add('nav--opened');
@@ -16,11 +16,17 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-button.addEventListener ("click", function(evt) {
-  evt.preventDefault ();
-  popup.classList.add('modal-size-show')
-  console.log('hello')
-});
+//модальное окно
+
+for (var i = 0; i < buttons.length; i++) {
+  button = buttons[i];
+  button.addEventListener('click', modalShow);
+}
+
+function modalShow(evt) {
+  evt.preventDefault();
+  popup.classList.add("modal-size-show")
+}
 
 window.addEventListener("keydown", function(evt) {
   if(evt.keyCode === 27) {
