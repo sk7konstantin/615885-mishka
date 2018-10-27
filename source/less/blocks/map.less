@@ -1,17 +1,33 @@
 .map {
+  position: relative;
   width: 320px;
   height: 457px;
   background-color: #f4e9d7;
+}
+
+.map__image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
 }
 
 @media (min-width: @tablet-width) {
   .map {
     width: 768px;
   }
+
+  .map__box {
+    width: 768px;
+  }
 }
 
 @media (min-width: @desctop-width) {
   .map {
+    width: 525px;
+  }
+
+  .map__box {
     width: 525px;
   }
 }

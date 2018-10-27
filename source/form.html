@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <title>Форма магазина</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <meta name="viewport" content="width=device-width">
+  <link rel="preload" href="fonts/opensans.woff2">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <meta name="viewport" content="width=device-width" as="font">
 </head>
 <body>
-  <div style="display: none;">
+  <div class="svg-include">
     <include src="build/img/sprite.svg"></include>
   </div>
   <div class="wrapper">
     <!--Шапка страницы-->
     <header class="header header-container">
-      <nav class="nav nav--closed nav--nojs">
+      <nav class="nav nav--opened nav--nojs">
         <button class="nav__toggle nav--icon-closed nav--icon-opened" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -82,8 +84,8 @@
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
               <!--Блок с типом заказа-->
           <fieldset class="form__fieldset form__fieldset--type">
+            <div class="form__legend">Тип</div>
             <div class="form__fieldset-wrapper">
-              <div class="form__legend">Тип</div>
               <div class="form__input-box form__input-box--type">
                 <input class="visually-hidden form__input-type" type="radio" name="type-accessory" id="accessory" checked="">
                 <label class="form__box-type form__box-title form__box-type--radio" for="accessory">Аксессуар для интерьера</label>
@@ -96,8 +98,8 @@
           </fieldset>
             <!--Блок с выбором цвета-->
           <fieldset class="form__fieldset form__fieldset--color">
+            <div class="form__legend form__legend--color">Цвет</div>
             <div class="form__fieldset-wrapper form__fieldset-wrapper--color">
-              <div class="form__legend">Цвет</div>
               <div class="form__input-box form__input-box--color form__input-color--width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-white" id="type-white" checked="">
                 <label class="form__box-color form__box-title" for="type-white">Белый</label>
@@ -108,7 +110,7 @@
               </div>
               <div class="form__input-box form__input-box--color form__input-color--width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-tifany" id="type-tifany">
-                <label class="form__box-color form__box-title" for="type-tifany">"Тиффани"</label>
+                <label class="form__box-color form__box-title" for="type-tifany">&#171;Тиффани&#187;</label>
               </div>
               <div class="form__input-box form__input-box--color form__input-color--width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-black" id="type-black">
@@ -126,8 +128,8 @@
           </fieldset>
             <!--Блок с данными пользователя-->
           <fieldset class="form__fieldset form__fieldset--user">
+            <div class="form__legend form__legend--user">ФИО</div>
             <div class="form__fieldset-wrapper">
-              <div class="form__legend form__legend--user">ФИО</div>
               <div class="form__input-box form__input-box--user">
                 <label class="form__box-title form__input-box--title" for="name">Имя:</label>
                 <input class="form__input-element" type="text" id="name" name="name" placeholder="Введите ваше имя*">
@@ -144,34 +146,34 @@
           </fieldset>
             <!--Блок с номером телефона-->
           <fieldset class="form__fieldset form__fieldset--tel">
+            <div class="form__legend form__legend--tel">Тел</div>
             <div class="form__fieldset-wrapper">
-              <div class="form__legend form__legend--tel">Тел</div>
               <div class="form__input-box form__input-box--icon">
                   <label class="visually-hidden" for="number-phone">Номер телефона:</label>
+                  <input class="form__input-element form__input-element--phone" type="tel" id="number-phone" name="phone" placeholder="+7 XXX XXX XX XX*">
                   <svg class="form__input-box--icon-phone" width="25" height="24">
                     <use xlink:href="#icon-phone"></use>
                   </svg>
-                  <input class="form__input-element form__input-element--phone" type="tel" id="number-phone" name="phone" placeholder="+7 XXX XXX XX XX*">
               </div>
             </div>
           </fieldset>
             <!--Блок с email-->
           <fieldset class="form__fieldset form__fieldset--email">
+            <div class="form__legend form__legend--email">e-mail</div>
             <div class="form__fieldset-wrapper">
-              <div class="form__legend form__legend--email">e-mail</div>
               <div class="form__input-box form__input-box--icon">
                 <label class="visually-hidden" for="mail">Email:</label>
+                <input class="form__input-element" type="email" id="mail" name="email" placeholder="Ваш Email*">
                 <svg class="form__input-box--icon-email" width="32" height="32">
                   <use xlink:href="#icon-mail"></use>
                 </svg>
-                <input class="form__input-element" type="email" id="mail" name="email" placeholder="Ваш Email*">
               </div>
             </div>
           </fieldset>
             <!--Блок с комменатарием к заказу-->
           <fieldset class="form__fieldset form__fieldset--comment">
+            <div class="form__legend form__legend--comment">Доп</div>
             <div class="form__fieldset-wrapper">
-              <div class="form__legend form__legend--comment">Доп</div>
               <label class="visually-hidden" for="comment">Коментарий к заказу:</label>
               <textarea class="form__input-textarea" name="comments" id="comment" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
@@ -188,7 +190,7 @@
     <footer class="footer">
       <div class="footer__wrapper-container">
         <div class="footer__logo">
-          <a class="footer__logo-link" href="index.html">
+          <a class="footer__logo-link" target="_blank" rel="noopener" href="https://htmlacademy.ru/intensive/adaptive">
             <svg width="101" height="34">
               <use xlink:href="#icon-footer-logo"></use>
             </svg>
@@ -222,7 +224,7 @@
         </ul>
         <div class="footer__copyright copyright">
           <span class="copyright__text">Разработано</span>
-          <a class="copyright__link" target="_blank" rel="noopener" href="#">
+          <a class="copyright__link" target="_blank" rel="noopener" href="https://htmlacademy.ru/intensive/adaptive">
             <svg width="27" height="34">
               <use xlink:href="#icon-logo-htmlacademy"></use>
             </svg>

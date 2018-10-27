@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <meta name="viewport" content="width=device-width">
+    <link rel="preload" href="fonts/opensans.woff2">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <meta name="viewport" content="width=device-width" as="font">
   </head>
   <body>
-    <div style="display: none;">
+    <div class="svg-include">
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="wrapper">
       <!--Шапка страницы-->
       <header class="header header-container">
-        <nav class="nav nav--closed nav--nojs">
+        <nav class="nav nav--opened nav--nojs">
           <button class="nav__toggle nav--icon-closed nav--icon-opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -81,7 +83,7 @@
               <div class="product__image product__image--hare">
                 <a class="product__image-link" href="#"></a>
                 <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
 
@@ -97,7 +99,7 @@
                 </div>
                 <div class="product__price-box">
                   <span class="product__price">1 200 руб.</span>
-                  <button class="product__button" type="button">
+                  <button class="product__button product__button--js" type="button">
                     <svg width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
@@ -110,7 +112,7 @@
               <div class="product__image product__image--bowl">
                 <a class="product__image-link" href="#"></a>
                 <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
 
@@ -126,7 +128,7 @@
                 </div>
                 <div class="product__price-box">
                   <span class="product__price">690 руб.</span>
-                  <button class="product__button" type="button">
+                  <button class="product__button  product__button--js" type="button">
                     <svg width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
@@ -139,7 +141,7 @@
               <div class="product__image product__image--toys">
                 <a class="product__image-link" href="#"></a>
                 <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
 
@@ -155,7 +157,7 @@
                 </div>
                 <div class="product__price-box">
                   <span class="product__price">1 500 руб.</span>
-                  <button class="product__button" type="button">
+                  <button class="product__button  product__button--js" type="button">
                     <svg width="20" height="19">
                       <use xlink:href="#icon-cart"></use>
                     </svg>
@@ -186,7 +188,7 @@
       <footer class="footer">
         <div class="footer__wrapper-container">
           <div class="footer__logo">
-            <a class="footer__logo-link" href="index.html">
+            <a class="footer__logo-link" target="_blank" rel="noopener" href="https://htmlacademy.ru/intensive/adaptive">
               <svg width="101" height="34">
                 <use xlink:href="#icon-footer-logo"></use>
               </svg>
@@ -220,7 +222,7 @@
           </ul>
           <div class="footer__copyright copyright">
             <span class="copyright__text">Разработано</span>
-            <a class="copyright__link" target="_blank" rel="noopener" href="#">
+            <a class="copyright__link" target="_blank" rel="noopener" href="https://htmlacademy.ru/intensive/adaptive">
               <svg width="27" height="34">
                 <use xlink:href="#icon-logo-htmlacademy"></use>
               </svg>
