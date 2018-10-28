@@ -163,8 +163,7 @@
   border-color: @lightgreen-color;
 }
 
-.form__input-box--icon-phone,
-.form__input-box--icon-email {
+.form__input-box-icon {
   position: absolute;
   top: 0;
   right: 2%;
@@ -196,8 +195,7 @@
   }
 }
 
-.form__input-element:focus + .form__input-box--icon-phone,
-.form__input-element:focus + .form__input-box--icon-email {
+.form__input-element:focus + .form__input-box-icon{
   fill: @lightgreen-color;
 }
 
@@ -391,15 +389,17 @@
     }
   }
 
+  .form__box-title {
+    &--margin {
+      margin-right: 28px;
+    }
+  }
+
   .form__input-box {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-
-    &--title {
-      margin-right: 28px;
-    }
 
     &--type {
       min-width: 334px;
@@ -452,7 +452,7 @@
     padding-left: 17px;
   }
 
-  .form__input-color--width {
+  .form__input-box--color-width {
     width: 180px;
   }
 

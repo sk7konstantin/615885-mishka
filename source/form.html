@@ -6,17 +6,18 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" as="font">
   <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <div class="svg-include">
     <include src="build/img/sprite.svg"></include>
   </div>
   <div class="wrapper">
+
     <!--Шапка страницы-->
     <header class="header header-container">
       <nav class="nav nav--opened nav--nojs">
-        <button class="nav__toggle nav--icon-closed nav--icon-opened" type="button">
+        <button class="nav__toggle nav__toggle--icon-closed nav__toggle--icon-opened" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="header__logo-box">
@@ -70,6 +71,7 @@
 
     <main class="page-order">
       <div class="main-small">Бесплатная доставка по России</div>
+
       <!--Блок с названием страницы-->
       <div class="page-title-box">
           <h1 class="page-title">Вязание на заказ</h1>
@@ -82,6 +84,7 @@
           Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
         </p>
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
+
               <!--Блок с типом заказа-->
           <fieldset class="form__fieldset form__fieldset--type">
             <div class="form__legend">Тип</div>
@@ -96,54 +99,57 @@
               </div>
             </div>
           </fieldset>
+
             <!--Блок с выбором цвета-->
           <fieldset class="form__fieldset form__fieldset--color">
             <div class="form__legend form__legend--color">Цвет</div>
             <div class="form__fieldset-wrapper form__fieldset-wrapper--color">
-              <div class="form__input-box form__input-box--color form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-box--color-width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-white" id="type-white" checked="">
                 <label class="form__box-color form__box-title" for="type-white">Белый</label>
               </div>
-              <div class="form__input-box form__input-box--color form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-box--color-width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-gray" id="type-gray" checked="">
                 <label class="form__box-color form__box-title" for="type-gray">Серый</label>
               </div>
-              <div class="form__input-box form__input-box--color form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-box--color-width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-tifany" id="type-tifany">
                 <label class="form__box-color form__box-title" for="type-tifany">&#171;Тиффани&#187;</label>
               </div>
-              <div class="form__input-box form__input-box--color form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-box--color-width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-black" id="type-black">
                 <label class="form__box-color form__box-title" for="type-black">Черный</label>
               </div>
-              <div class="form__input-box form__input-box--color form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-box--color-width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-pink" id="type-pink">
                 <label class="form__box-color form__box-title" for="type-pink">Розовый</label>
               </div>
-              <div class="form__input-box form__input-box--color form__input-color--width">
+              <div class="form__input-box form__input-box--color form__input-box--color-width">
                 <input class="visually-hidden form__input-color" type="checkbox" name="color-orange" id="type-orange">
                 <label class="form__box-color form__box-title" for="type-orange">Оранжевый</label>
               </div>
             </div>
           </fieldset>
+
             <!--Блок с данными пользователя-->
           <fieldset class="form__fieldset form__fieldset--user">
             <div class="form__legend form__legend--user">ФИО</div>
             <div class="form__fieldset-wrapper">
               <div class="form__input-box form__input-box--user">
-                <label class="form__box-title form__input-box--title" for="name">Имя:</label>
+                <label class="form__box-title form__box-title--margin" for="name">Имя:</label>
                 <input class="form__input-element" type="text" id="name" name="name" placeholder="Введите ваше имя*">
               </div>
               <div class="form__input-box form__input-box--user">
-                <label class="form__box-title form__input-box--title" for="surname">Фамилия:</label>
+                <label class="form__box-title form__box-title--margin" for="surname">Фамилия:</label>
                 <input class="form__input-element" type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
               </div>
               <div class="form__input-box form__input-box--user">
-                <label class="form__box-title form__input-box--title" for="patronymic">Отчество:</label>
+                <label class="form__box-title form__box-title--margin" for="patronymic">Отчество:</label>
                 <input class="form__input-element" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
               </div>
             </div>
           </fieldset>
+
             <!--Блок с номером телефона-->
           <fieldset class="form__fieldset form__fieldset--tel">
             <div class="form__legend form__legend--tel">Тел</div>
@@ -151,12 +157,13 @@
               <div class="form__input-box form__input-box--icon">
                   <label class="visually-hidden" for="number-phone">Номер телефона:</label>
                   <input class="form__input-element form__input-element--phone" type="tel" id="number-phone" name="phone" placeholder="+7 XXX XXX XX XX*">
-                  <svg class="form__input-box--icon-phone" width="25" height="24">
+                  <svg class="form__input-box-icon" width="25" height="24">
                     <use xlink:href="#icon-phone"></use>
                   </svg>
               </div>
             </div>
           </fieldset>
+
             <!--Блок с email-->
           <fieldset class="form__fieldset form__fieldset--email">
             <div class="form__legend form__legend--email">e-mail</div>
@@ -164,12 +171,13 @@
               <div class="form__input-box form__input-box--icon">
                 <label class="visually-hidden" for="mail">Email:</label>
                 <input class="form__input-element" type="email" id="mail" name="email" placeholder="Ваш Email*">
-                <svg class="form__input-box--icon-email" width="32" height="32">
+                <svg class="form__input-box-icon" width="32" height="32">
                   <use xlink:href="#icon-mail"></use>
                 </svg>
               </div>
             </div>
           </fieldset>
+
             <!--Блок с комменатарием к заказу-->
           <fieldset class="form__fieldset form__fieldset--comment">
             <div class="form__legend form__legend--comment">Доп</div>

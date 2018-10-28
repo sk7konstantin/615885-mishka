@@ -6,17 +6,18 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div class="svg-include">
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="wrapper">
+
       <!--Шапка страницы-->
       <header class="header header-container">
         <nav class="nav nav--opened nav--nojs">
-          <button class="nav__toggle nav--icon-closed nav--icon-opened" type="button">
+          <button class="nav__toggle nav__toggle--icon-closed nav__toggle--icon-opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="header__logo-box">
@@ -30,15 +31,15 @@
           </div>
             <ul class="nav__list site-list list-reset">
               <li class="site-list__item">
-                <a class="nav__link link-block nav__link-site" href="catalog.html">Каталог товаров</a>
+                <a class="nav__link link-block nav__link--site" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="site-list__item">
-                <a class="nav__link link-block nav__link-site" href="form.html">Вязание на заказ</a>
+                <a class="nav__link link-block nav__link--site" href="form.html">Вязание на заказ</a>
               </li>
             </ul>
             <ul class="nav__list user-list list-reset">
-              <li class="user-list__item user-list__item-search">
-                <form class="user-list__item-form nav__link" action="https://echo.htmlacademy.ru" method="get">
+              <li class="user-list__item user-list__item--search">
+                <form class="user-list__item-form" action="https://echo.htmlacademy.ru" method="get">
                   <button class="user-list__button" type="button">
                     <svg class=" user-list__icon user-list__icon--search" width="18" height="18">
                       <use xlink:href="#icon-search"></use>
@@ -48,8 +49,8 @@
                   <input class="user-list__search-input" id="user-search" type="search" placeholder="Поиск по сайту">
                 </form>
               </li>
-              <li class="user-list__item user-list__item-basket">
-                <a class="user-list__basket nav__link link-block" href="#">
+              <li class="user-list__item user-list__item--basket">
+                <a class="user-list__basket link-block" href="#">
                   <svg class="user-list__icon user-list__icon--basket" width="20" height="19">
                     <use xlink:href="#icon-cart"></use>
                   </svg>
@@ -59,19 +60,18 @@
             </ul>
             <ul class="sale-list list-reset ">
               <li class="sale-list__item">
-                <a href="" class="sale-list__link nav__link">Новые поступления</a>
+                <a href="" class="sale-list__link">Новые поступления</a>
               </li>
               <li class="sale-list__item">
-                <a href="" class="sale-list__link nav__link">Распродажа</a>
+                <a href="" class="sale-list__link">Распродажа</a>
               </li>
             </ul>
         </nav>
       </header>
+
       <!--Основное содержание страницы-->
       <main class="main">
-
         <h1 class="visually-hidden">Интернет магазин</h1>
-
         <div class="main-small">Бесплатная доставка по России</div>
 
         <!--Блок с описание Магазина-->
@@ -139,7 +139,7 @@
                 </div>
                 <span class="product-week__price">Цена: 990 руб.</span>
                 <div class="product-week__button-box">
-                  <a class="product-week__button button product__button--js" href="#">Заказать</a>
+                  <a class="product-week__button button product-week__button--js" href="#">Заказать</a>
                 </div>
               </div>
             </div>
@@ -169,6 +169,7 @@
             </li>
           </ul>
         </section>
+
         <!--Блок с отзывами-->
         <section class="reviews">
           <div class="reviews__container">
@@ -185,7 +186,7 @@
                   </div>
                 <!-- </li> -->
               <!-- </ul> -->
-              <div class="reviews__toggles slider__toggles">
+              <div class="reviews__toggles slider">
                 <button class="slider__toggle slider__toggle--prev" type="button">
                   <span class="visually-hidden">Предыдущий отзыв</span>
                 </button>
@@ -197,6 +198,7 @@
             <!-- </div> -->
           </div>
         </section>
+
         <!--Блок с контактами-->
         <section class="contacts">
           <div class="contacts__container">
@@ -217,6 +219,7 @@
               </div>
             </div>
           </div>
+
           <!--Блок с картой-->
           <div class="map" id="map">
             <h2 class="visually-hidden">Карта с местоположением магазина</h2>
@@ -236,6 +239,7 @@
           </div>
         </section>
       </main>
+
       <!--Подвал страницы-->
       <footer class="footer">
         <div class="footer__wrapper-container">
@@ -285,7 +289,7 @@
       <div class="modal modal-size">
         <h2 class="modal__title">Добавить в корзину</h2>
         <span class="modal__text">Выберите размер:</span>
-        <ul class="modal__list size__list list-reset">
+        <ul class="modal__list size list-reset">
           <li class="size__item">S</li>
           <li class="size__item">M</li>
           <li class="size__item">L</li>

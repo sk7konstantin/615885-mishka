@@ -11,7 +11,7 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
-var cheerio = require("gulp-cheerio")
+var cheerio = require("gulp-cheerio");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
@@ -68,7 +68,7 @@ gulp.task("server", function () {
 gulp.task("refresh", function(done){
   server.reload();
   done();
-})
+});
 
 gulp.task("images", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
@@ -123,6 +123,6 @@ gulp.task("build", gulp.series(
   "css",
   "sprite",
   "html"
-))
+));
 
 gulp.task("start", gulp.series("css", "server"));
