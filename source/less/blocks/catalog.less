@@ -21,6 +21,8 @@
   position: relative;
   margin-bottom: 23px;
   background-color: #f1f1f1;
+  height: 195px;
+  overflow: hidden;
 }
 
 .product__image-link {
@@ -70,6 +72,8 @@
   background-color: #ffffff;
   cursor: pointer;
   outline: none;
+  margin-right: -8px;
+  opacity: 0.3;
 
   &:hover,
   &:focus {
@@ -95,8 +99,8 @@
 
   .product__title {
     font-size: 20px;
-    padding-right: 30px;
-    margin-bottom: 4px;
+    padding-right: 35px;
+    margin-bottom: 6px;
     margin-top: 25px;
 
     &:hover,
@@ -112,8 +116,15 @@
 
   .product__image {
     margin-bottom: 0;
-    width: 334px;
+    // width: 334px;
     height: 334px;
+    overflow: visible;
+  }
+
+  .product__name-box {
+    // margin-bottom: 147px;
+    margin-left: -5px;
+    width: 100%;
   }
 
   .product__characteristic {
@@ -122,37 +133,54 @@
   }
 
   .product__info {
+    position: relative;
     // width: 334px;
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
   }
 
   .product__price-box {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     font-size: 17px;
-    margin-top: auto;
+    // width: 270px;
+    width: 100%;
+    // margin-top: auto;
+  }
+
+  .product__button {
+    margin-right: -4px;
   }
 }
 
 @media (min-width: @desctop-width) {
   .catalogs {
     margin-top: 132px;
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
 
   .catalogs__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: stretch;
   }
 
   .product {
     display: block;
     width: 316px;
-    margin-bottom: 0;
+    margin-right: 50px;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
 
     &:hover,
     &:focus {
@@ -170,7 +198,7 @@
 
   .product__title {
     padding-right: 20px;
-    min-height: 48px;
+    // min-height: 48px;
   }
 
   .product__image {
@@ -183,9 +211,17 @@
     width: 100%;
     margin: 0;
     padding: 0 30px;
+    min-height: 205px;
   }
 
   .product__characteristic {
     margin-bottom: 15px;
+  }
+
+  .product__price-box {
+    // position: static;
+    left: 28px;
+    bottom: 0;
+    width: 255px;
   }
 }

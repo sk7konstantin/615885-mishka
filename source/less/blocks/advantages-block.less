@@ -13,6 +13,7 @@
   line-height: 20px;
   font-weight: bold;
   margin-bottom: 31px;
+  width: 200px;
 
   &:last-child {
     margin-bottom: 0;
@@ -25,12 +26,24 @@
     background-repeat: no-repeat;
   }
 
+  &--width-flower {
+    width: 195px;
+  }
+
+  &--width-ball {
+    width: 210px;
+  }
+
+  &--width-rocket {
+    width: 260px;
+  }
+
   &--flower {
     &::before {
       background-image: url("../img/icon-feature-flower.svg");
       width: 32px;
       height: 37px;
-      margin-left: 5px;
+      margin-left: 8px;
     }
   }
 
@@ -47,7 +60,7 @@
       background-image: url("../img/icon-feature-heart.svg");
       width: 34px;
       height: 30px;
-      margin-left: 5px;
+      margin-left: 8px;
     }
   }
 
@@ -56,6 +69,8 @@
       background-image: url("../img/icon-feature-ball.svg");
       width: 35px;
       height: 34px;
+      margin-left: 4px;
+      margin-bottom: 18px;
     }
   }
 
@@ -64,6 +79,8 @@
       background-image: url("../img/icon-feature-rocket.svg");
       width: 55px;
       height: 23px;
+      margin-left: -6px;
+      margin-bottom: 28px;
     }
   }
 
@@ -72,6 +89,7 @@
       background-image: url("../img/icon-feature-gift.svg");
       width: 33px;
       height: 32px;
+      margin-left: 4px;
     }
   }
 }
@@ -80,14 +98,15 @@
   .advantages {
     .container-tablet;
     margin-bottom: 0;
-    padding-top: 55px;
+    padding-top: 57px;
     padding-bottom: 25px;
   }
 
   .advantages__title {
     font-size: 43px;
     line-height: 50px;
-    margin-bottom: 45px;
+    margin-bottom: 48px;
+    margin-left: -6px;
   }
 
   .advantages__list {
@@ -95,6 +114,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     // height: 430px;
+    width: 668px;
   }
 
   .advantages__item {
@@ -106,20 +126,41 @@
     margin-bottom: 60px;
     padding-right: 40px;
 
-    // &:nth-of-type(3n) {
-    //   margin-bottom: 0;
-    // }
+    &--width-flower {
+      padding-right: 102px;
+    }
+
+    &--width-money {
+      padding-right: 70px;
+    }
+
+    &--width-heart {
+      padding-right: 95px;
+    }
 
     &--flower {
       order: -5;
+
+      &::before {
+        margin-left: 12px;
+        margin-bottom: 17px;
+      }
     }
 
     &--ball {
       order: -4;
+
+      &::before {
+        margin-bottom: 20px;
+      }
     }
 
     &--money {
       order: -3;
+
+      &::before {
+        margin-left: 4px;
+      }
     }
 
     &--rocket {
@@ -128,10 +169,18 @@
 
     &--heart {
       order: -1;
+
+      &::before {
+        margin-left: 11px;
+      }
     }
 
     &--gift {
       order: 0;
+
+      &::before {
+        margin-bottom: 20px;
+      }
     }
   }
 }
@@ -145,5 +194,27 @@
   .advantages__title {
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .advantages__list {
+    width: 700px;
+  }
+
+  .advantages__item {
+    width: 350px;
+    margin-bottom: 60px;
+    padding-right: 55px;
+
+    &--width-flower {
+      padding-right: 127px;
+    }
+
+    &--width-money {
+      padding-right: 95px;
+    }
+
+    &--width-heart {
+      padding-right: 120px;
+    }
   }
 }
