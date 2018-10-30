@@ -3,6 +3,7 @@
   padding: 23px 0;
   .container;
   margin-bottom: 65px;
+  overflow: hidden;
 }
 
 .production__title-box {
@@ -27,7 +28,7 @@
     background-image: url("../img/icon-video.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 2;
+    z-index: 1;
   }
 }
 
@@ -39,33 +40,33 @@
   background-color: #f1f1f1;
   background-image: url("../img/video-mobile@1x.jpg");
   background-size: cover;
-
-  &::before {
-    content: "";
-    display: block;
-    width: 101px;
-    height: 77px;
-    background-image: url("../img/icon-play.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: auto;
-  }
-
-  &:hover {
-    &::before {
-      transform: scale(1.2);
-    }
-  }
-
-  &:active {
-    &::before {
-      transform: scale(0.8);
-      opacity: 0.7;
-    }
-  }
+  background-repeat: no-repeat;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/video-mobile@2x.jpg");
+  }
+}
+
+.production__image__button {
+  width: 101px;
+  height: 77px;
+  background-color: @lightgreen-color;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 20px;
+  margin: auto;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.7;
   }
 }
 
@@ -86,7 +87,7 @@
     flex-direction: column;
     .container-tablet;
     padding: 0;
-    margin-bottom: 70px;
+    margin-bottom: 63px;
   }
 
   .production__image {
@@ -103,6 +104,7 @@
 
   .production__info {
     margin: 0 40px;
+    margin-bottom: 8px;
   }
 
   .production__title {
@@ -112,7 +114,7 @@
 
     &::before {
       top: -5px;
-      left: -63px;
+      left: -65px;
     }
   }
 
@@ -134,7 +136,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     // height: 452px;
-    margin-bottom: 107px;
+    margin-bottom: 102px;
   }
 
   .production__info {
@@ -146,11 +148,11 @@
 
   .production__title-box {
     position: absolute;
-    right: 110px;
+    right: 107px;
     margin: 0;
     margin-top: 94px;
     margin-bottom: 34px;
-    padding: 0 0 0 74px;
+    // padding: 0 0 0 74px;
   }
 
   .production__description {
@@ -162,7 +164,7 @@
     margin: 0;
 
     &::before {
-      top: -52px;
+      top: -54px;
       left: 0;
     }
   }

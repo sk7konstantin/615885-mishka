@@ -6,17 +6,18 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div class="svg-include">
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="wrapper">
+
       <!--Шапка страницы-->
       <header class="header header-container">
         <nav class="nav nav--opened nav--nojs">
-          <button class="nav__toggle nav--icon-closed nav--icon-opened" type="button">
+          <button class="nav__toggle nav__toggle--icon-closed nav__toggle--icon-opened" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="header__logo-box">
@@ -30,15 +31,15 @@
           </div>
             <ul class="nav__list site-list list-reset">
               <li class="site-list__item">
-                <a class="nav__link link-block nav__link-site" href="catalog.html">Каталог товаров</a>
+                <a class="nav__link link-block nav__link--site" href="catalog.html">Каталог товаров</a>
               </li>
               <li class="site-list__item">
-                <a class="nav__link link-block nav__link-site" href="form.html">Вязание на заказ</a>
+                <a class="nav__link link-block nav__link--site" href="form.html">Вязание на заказ</a>
               </li>
             </ul>
             <ul class="nav__list user-list list-reset">
-              <li class="user-list__item user-list__item-search">
-                <form class="user-list__item-form nav__link" action="https://echo.htmlacademy.ru" method="get">
+              <li class="user-list__item user-list__item--search">
+                <form class="user-list__item-form" action="https://echo.htmlacademy.ru" method="get">
                   <button class="user-list__button" type="button">
                     <svg class=" user-list__icon user-list__icon--search" width="18" height="18">
                       <use xlink:href="#icon-search"></use>
@@ -48,8 +49,8 @@
                   <input class="user-list__search-input" id="user-search" type="search" placeholder="Поиск по сайту">
                 </form>
               </li>
-              <li class="user-list__item user-list__item-basket">
-                <a class="user-list__basket nav__link link-block" href="#">
+              <li class="user-list__item user-list__item--basket">
+                <a class="user-list__basket link-block" href="#">
                   <svg class="user-list__icon user-list__icon--basket" width="20" height="19">
                     <use xlink:href="#icon-cart"></use>
                   </svg>
@@ -59,26 +60,25 @@
             </ul>
             <ul class="sale-list list-reset ">
               <li class="sale-list__item">
-                <a href="" class="sale-list__link nav__link">Новые поступления</a>
+                <a href="" class="sale-list__link">Новые поступления</a>
               </li>
               <li class="sale-list__item">
-                <a href="" class="sale-list__link nav__link">Распродажа</a>
+                <a href="" class="sale-list__link">Распродажа</a>
               </li>
             </ul>
         </nav>
       </header>
+
       <!--Основное содержание страницы-->
       <main class="main">
-
         <h1 class="visually-hidden">Интернет магазин</h1>
-
-        <div class="main-small">Бесплатная доставка по России</div>
+        <div class="main-small"><span>Бесплатная доставка по России</span></div>
 
         <!--Блок с описание Магазина-->
         <section class="description-shop">
           <header class="description-shop__header">
             <div class="description-shop__container"> <!--Блок центровщик -->
-              <h2 class="description-shop__title">Милые штуки ручной<br>работы для дома</h2>
+              <h2 class="description-shop__title">Милые штуки ручной&#32;<br>работы для дома</h2>
             </div>
           </header>
           <div class="content-shop">
@@ -86,14 +86,14 @@
               <li class="content-shop__item content-shop__item--light">
                 <a class="content-shop__link content-shop__link--light" href="#">
                   <div class="content-shop__text-box content-shop__text-box--interior">
-                    Предметы<br> интерьера
+                    <span class="content-shop__text-box__element">Предметы интерьера</span>
                   </div>
                 </a>
               </li>
               <li class="content-shop__item content-shop__item--dark">
                 <a class="content-shop__link content-shop__link--dark" href="#">
                   <div class="content-shop__text-box content-shop__text-box--game">
-                    Детские<br> игрушки
+                    <span class="content-shop__text-box__element">Детские игрушки</span>
                   </div>
                 </a>
               </li>
@@ -128,7 +128,7 @@
                 </div>
                 <div class="product-week__image">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
 
@@ -139,7 +139,7 @@
                 </div>
                 <span class="product-week__price">Цена: 990 руб.</span>
                 <div class="product-week__button-box">
-                  <a class="product-week__button button product__button--js" href="#">Заказать</a>
+                  <a class="product-week__button button product-week__button--js" href="#">Заказать</a>
                 </div>
               </div>
             </div>
@@ -149,26 +149,27 @@
         <section class="advantages">
           <h2 class="advantages__title index-title-h2">Коротко о нас:</h2>
           <ul class="advantages__list list-reset">
-            <li class="advantages__item advantages__item--flower">
+            <li class="advantages__item advantages__item--flower advantages__item--width-flower">
               Экологически чистые материалы
             </li>
-            <li class="advantages__item advantages__item--money">
+            <li class="advantages__item advantages__item--money advantages__item--width-money">
               Скандинавский стиль по российской цене
             </li>
-            <li class="advantages__item advantages__item--heart">
+            <li class="advantages__item advantages__item--heart advantages__item--width-heart">
               Увеличивает лайки на фотографиях
             </li>
-            <li class="advantages__item advantages__item--ball">
+            <li class="advantages__item advantages__item--ball advantages__item--width-ball">
               Связано вручную с любовью и умилением
             </li>
-            <li class="advantages__item advantages__item--rocket">
+            <li class="advantages__item advantages__item--rocket advantages__item--width-rocket">
               Поддержка отечественного производителя
             </li>
-            <li class="advantages__item advantages__item--gift">
+            <li class="advantages__item advantages__item--gift advantages__item--width-gift">
               Поставляется в подарочной упаковке
             </li>
           </ul>
         </section>
+
         <!--Блок с отзывами-->
         <section class="reviews">
           <div class="reviews__container">
@@ -176,7 +177,7 @@
             <!-- <div class="reviews__wrapper slider"> -->
               <!-- <ul class="reviews__list slider__list list-reset">
                 <li class="reviews__item slider__item"> -->
-                  <p class="reviews__description">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+                  <p class="reviews__description">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
                   <div class="reviews__autor-block">
                     <span class="reviews__autor-name">Анастасия Красильникова</span>
                     <div class="reviews__autor-login">
@@ -185,7 +186,7 @@
                   </div>
                 <!-- </li> -->
               <!-- </ul> -->
-              <div class="reviews__toggles slider__toggles">
+              <div class="reviews__toggles slider">
                 <button class="slider__toggle slider__toggle--prev" type="button">
                   <span class="visually-hidden">Предыдущий отзыв</span>
                 </button>
@@ -197,6 +198,7 @@
             <!-- </div> -->
           </div>
         </section>
+
         <!--Блок с контактами-->
         <section class="contacts">
           <div class="contacts__container">
@@ -217,6 +219,7 @@
               </div>
             </div>
           </div>
+
           <!--Блок с картой-->
           <div class="map" id="map">
             <h2 class="visually-hidden">Карта с местоположением магазина</h2>
@@ -236,6 +239,7 @@
           </div>
         </section>
       </main>
+
       <!--Подвал страницы-->
       <footer class="footer">
         <div class="footer__wrapper-container">
@@ -285,7 +289,7 @@
       <div class="modal modal-size">
         <h2 class="modal__title">Добавить в корзину</h2>
         <span class="modal__text">Выберите размер:</span>
-        <ul class="modal__list size__list list-reset">
+        <ul class="modal__list size list-reset">
           <li class="size__item">S</li>
           <li class="size__item">M</li>
           <li class="size__item">L</li>

@@ -29,7 +29,7 @@
   margin-bottom: 25px;
 }
 
-.size__list {
+.size {
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
@@ -41,10 +41,15 @@
   align-items: center;
   width: 80px;
   height: 50px;
-  border: 2px solid #444444;
+  border: 2px solid rgba(68, 68, 68, 0.1);
 
-  &:hover {
-    border-color: @darkgreen-color;
+  &:hover,
+  &:focus {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &:active {
+    border-color: @lightgreen-color;
   }
 }
 
