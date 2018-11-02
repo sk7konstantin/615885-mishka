@@ -10,7 +10,7 @@
 
 .product {
   border: 1px solid @gray-color;
-  margin-bottom: 23px;
+  margin-bottom: 31px;
 
   &:last-child {
     margin-bottom: 0;
@@ -19,7 +19,7 @@
 
 .product__image {
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: 27px;
   background-color: #f1f1f1;
   height: 195px;
   overflow: hidden;
@@ -41,7 +41,8 @@
   line-height: 24px;
   font-weight: bold;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
+  margin-left: -3px;
 }
 
 .product__info {
@@ -51,7 +52,7 @@
 .product__characteristic {
   font-size: 13px;
   line-height: 13px;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .product__price-box {
@@ -60,8 +61,12 @@
   font-size: 15px;
   line-height: 30px;
   font-weight: bold;
-  padding: 22px 0 28px 0;
+  padding: 19px 0 24px 0;
   border-top: 1px solid @gray-color;
+}
+
+.product__price {
+  margin-left: -3px;
 }
 
 .product__button {
@@ -78,6 +83,7 @@
   &:hover,
   &:focus {
     fill: @lightgreen-color;
+    opacity: 1;
   }
 
   &:active {
@@ -102,6 +108,7 @@
     padding-right: 35px;
     margin-bottom: 6px;
     margin-top: 25px;
+    margin-left: 0;
 
     &:hover,
     &:focus {
@@ -149,7 +156,12 @@
     font-size: 17px;
     // width: 270px;
     width: 100%;
+    padding: 13px 0 30px 0;
     // margin-top: auto;
+  }
+
+  .product__price {
+    margin-left: 0;
   }
 
   .product__button {
@@ -223,5 +235,6 @@
     left: 28px;
     bottom: 0;
     width: 255px;
+    padding: 20px 0 30px 0;
   }
 }

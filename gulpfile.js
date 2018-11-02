@@ -48,7 +48,7 @@ gulp.task("uglify", function() {
   .pipe(uglify())
   .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest("build/js"))
-})
+});
 
 gulp.task("server", function () {
   server.init({
